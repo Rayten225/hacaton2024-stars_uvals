@@ -51,4 +51,51 @@ body{
         font-family: "IDBC";
     }
 }
+.container{
+    max-width: 1440px;
+    margin: 0px auto;
+}
 /* main */
+main{
+    .info-project{
+        .container .wraper{
+            display: flex;
+            width: 100%;
+            margin-block: 150px;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 10px;
+
+            .info-project__text{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap:40px;
+
+                h2{
+                    font-size: 40px;
+                    color:#5B9F70;
+                }
+                p{
+                    width: 660px;
+                    font-size: 24px;
+                    line-height: 27.6px;
+
+                    &.info-project__paragraph_grean-back-dark{
+                        background-color: #256037;
+                        padding: 20px;
+                        color:#ffffff;
+                        border-radius: 15px;
+                    }
+                }
+            }
+            .info-project__img{
+                img{
+                    width: 500px;
+                    object-fit: cover;
+                    object-position: left center;
+                }
+            }
+        }
+    }
+}

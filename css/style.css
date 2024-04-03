@@ -6,29 +6,26 @@
   font-family: "IDCLC";
   src: url("../font/IntroDemoCond-LightCAPS.otf");
 }
-.header {
+header .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-inline: 50px;
+  padding-inline: 150px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 70px;
 }
-
-.burger-button {
+header .header__menu .burger-button {
   position: relative;
   z-index: 9;
   padding: 8px;
   cursor: pointer;
 }
-
-/*this is where you can chand the color of the buttons*/
-.burger-button span {
+header .header__menu .burger-button span {
   width: 40px;
   border: 2px solid black;
   background-color: black;
@@ -37,41 +34,32 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
-.burger-top, .burger-bottom {
+header .header__menu .burger-top, header .header__menu .burger-bottom {
   position: absolute;
 }
-
-.burger-top {
+header .header__menu .burger-top {
   top: -2px;
 }
-
-.burger-bottom {
+header .header__menu .burger-bottom {
   bottom: -2px;
 }
-
-/* make sure this has the same top as the burger button has padding*/
-.burger-button.active .burger-top {
+header .header__menu .burger-button.active .burger-top {
   position: absolute;
   top: 8px;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-
-.burger-button.active .burger-middle {
+header .header__menu .burger-button.active .burger-middle {
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 }
-
-/* make sure this has the same bottom as the burger button has padding*/
-.burger-button.active .burger-bottom {
+header .header__menu .burger-button.active .burger-bottom {
   position: absolute;
   bottom: 8px;
   -webkit-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-
-.burger-menu {
+header .header__menu .burger-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,13 +85,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
-.burger-menu.active {
+header .header__menu .burger-menu.active {
   left: 50vw;
   right: 0;
 }
-
-.burger-menu a {
+header .header__menu .burger-menu a {
   font-family: "" IDBC;
   font-weight: 900;
   font-size: 40px;
@@ -117,9 +103,66 @@
   transition: all 0.2s;
   padding-block: 20px;
 }
-.burger-menu a:hover {
+header .header__menu .burger-menu a:hover {
   background-color: #80df9e;
   color: #000;
+}
+header .main {
+  background-image: url("/img/header_main_fon.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding-block: 190px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+header .main h3 {
+  font-size: 40px;
+  color: #5B9F70;
+}
+header .main__title {
+  background-color: #fff;
+  padding-block: 60px;
+  width: 100%;
+  text-align: center;
+}
+header .main__title h2 {
+  font-size: 64px;
+}
+header .main__title h2 span {
+  color: #5B9F70;
+}
+header .main h2 {
+  color: #256037;
+  font-size: 52px;
+}
+header .main a {
+  line-height: 36.8px;
+  color: #fff;
+  background-color: #5B9F70;
+  font-size: 32px;
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-family: "IDBC";
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+header .main a:hover {
+  background-color: #49815b;
 }
 
 * {

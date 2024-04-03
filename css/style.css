@@ -24,6 +24,7 @@
   position: relative;
   z-index: 9;
   padding: 8px;
+  cursor: pointer;
 }
 
 /*this is where you can chand the color of the buttons*/

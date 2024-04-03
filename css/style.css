@@ -269,7 +269,7 @@ main .info-project .container .wraper .info-project__text p {
 }
 main .info-project .container .wraper .info-project__text p.info-project__paragraph_grean-back-dark {
   background-color: #256037;
-  padding: 20px;
+  padding: 20px 40px;
   color: #ffffff;
   border-radius: 15px;
 }

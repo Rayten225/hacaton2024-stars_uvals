@@ -1,6 +1,8 @@
 @import "../include/header.scss";
 @import "../include/footer.scss";
 
+@mixin button()
+
 /* базовые настройки */
 *{
     box-sizing: border-box;
@@ -83,7 +85,7 @@ main{
 
                     &.info-project__paragraph_grean-back-dark{
                         background-color: #256037;
-                        padding: 20px;
+                        padding: 20px 40px;
                         color:#ffffff;
                         border-radius: 15px;
                     }

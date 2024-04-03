@@ -127,6 +127,13 @@ main{
                 padding: 20px;
                 color:#fff;
                 border-radius: 15px;
+                height: 100%;
+
+                p{
+                    display: grid;
+                    height: 100%;
+                    align-items: center;
+                }
             }
             .block4{
                 grid-row: 1 / 2;
@@ -179,6 +186,17 @@ main{
     }
     .map{
         /* карта */
-        display: grid;
+        article h2{
+            font-size: 48px;
+            color: #5B9F70;
+        }
+        .container .map__wraper .map__blocks{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .mySwiper{
+                grid-column: 1 / 3;
+            }
+        }
     }
 }

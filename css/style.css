@@ -283,6 +283,7 @@ main .info-project .container .info-project__wraper .info-project__img img {
      object-position: left center;
 }
 main .info-mesto {
+  /* информация о месте */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,6 +336,7 @@ main .info-mesto .container .info-mesto__wraper .block {
   font-weight: 900;
 }
 main .galary {
+  /* галерея */
   background-color: #F6F6F6;
   margin-block: 40px;
   padding-bottom: 40px;
@@ -350,7 +352,7 @@ main .galary swiper-container {
   width: 100%;
   height: 250px;
 }
-main .galary swiper-slide {
+main .galary swiper-container swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -363,11 +365,17 @@ main .galary swiper-slide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 15px;
 }
-main .galary swiper-slide img {
+main .galary swiper-container swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .map {
+  /* карта */
+  display: -ms-grid;
+  display: grid;
 }

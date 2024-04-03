@@ -5,7 +5,15 @@
 }
 @font-face {
     font-family: "IDCLC";
-    src: url("../font/IntroDemoCond-LightCAPS.otf");
+    src: url("../font/Arimo-VariableFont_wght.ttf");
+}
+
+// Для кнопок
+@mixin button($back, $col, $br, $fz){
+    background: $back;
+    color: $col;
+    border-radius: $br;
+    font-size: $fz;
 }
 
 /* header */
@@ -87,12 +95,11 @@ header{
                 font-size: 40px;
                 color: #fff;
                 display:block;
-                padding:5px 15px;
+                padding:20px 15px;
                 text-align:center;
                 white-space:nowrap;
                 border-radius: 10px;
                 transition: all .2s;
-                padding-block: 20px;
             
                 &.check{
                     background-color:#49815b;
@@ -140,19 +147,16 @@ header{
             font-size: 52px;
         }
         a{
+            @include button(#5B9F70, #fff, 30px, 32px);
             line-height: 36.8px;
-            color:#fff;
-            background-color: #5B9F70;
-            font-size: 32px;
             padding: 20px 40px;
             border: none;
             outline: none;
-            border-radius: 30px;
             font-family: "IDBC";
             transition: all .2s;
 
             &:hover{
-                background-color: #49815b;
+                @include button(#49815b, #fff, 30px, 32px);
             }
         }
     }

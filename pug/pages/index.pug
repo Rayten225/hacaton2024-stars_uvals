@@ -2,8 +2,32 @@ extends ../layouts/main-layout.pug
 
 block title
     title
-        | title
+        | Звездные увалы
 block css
     link(rel="stylesheet", href="css/style.css")
 block content
     main
+        // тнформация о проекте
+        section.info-project.main__info
+            .container.wraper 
+                article.info-project__text
+                    h2#info-project.info-project__title О проекте
+                    p.info-project__paragraph
+                        |Всероссийский конкурс 
+                        |лучших проектов создания
+                        | комфортной городской среды 
+                        |включен в федеральный проект 
+                        |«Формирование комфортной городской
+                        |среды» национального 
+                        |проекта «Жилье и городская среда».
+                    p.info-project__paragraph.info-project__paragraph_grean-back-dark 
+                        |Конкурс проводится по 
+                        |поручению Президента России с 2018 года.
+                    p.info-project__paragraph
+                        |В нем участвуют города 
+                        |с численностью населения 
+                        |до 200 тыс. человек, 
+                        |а также исторические поселения 
+                        |федерального и регионального значения.
+                .info-project__img 
+                    img(src="/img/man.svg", alt="человек")

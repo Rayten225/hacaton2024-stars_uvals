@@ -1,2 +1,54 @@
 @import "../include/header.scss";
 @import "../include/footer.scss";
+
+/* базовые настройки */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* 
+        настройка  скроллбара
+        для firefox
+    */
+    scrollbar-width: none;
+    scrollbar-color: #1eb821 #ffffff;
+    scroll-behavior: smooth;
+
+    ::after,
+    ::before{
+        box-sizing: inherit;
+    }
+    ::-webkit-scrollbar {
+        /* 
+            настройка скроллбара 
+            для других браузеров 
+        */
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #1eb821;
+        border-radius: 10px;
+        border: 0px none #ffffff;
+    }
+}
+body{
+    font-family: "IDCLC";
+    font-size: 16px;
+    font-weight: 400;
+
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    h1,
+    h2{
+        font-family: "IDBC";
+    }
+}
+/* main */

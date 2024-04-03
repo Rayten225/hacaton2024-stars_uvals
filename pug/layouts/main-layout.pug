@@ -5,8 +5,10 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block title
         block css
+        script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+        script(src='js/main.js' defer='')
     body
-        .wraper
+        #app.wraper
             include ../include/header.pug
 
             block content

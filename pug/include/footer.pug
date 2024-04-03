@@ -1,1 +1,16 @@
 footer
+    .container 
+        .footer__wraper 
+            section.footer__text 
+                .number 
+                    h4 Телефон: 8 (35253)33215
+                .email
+                    h4 Почта: grad@shadrinsk-city.ru
+                .op 
+                    h4 &copy; 2024 My Website. All rights reserves
+            nav.footer__navigation 
+                ul 
+                    each text, href in {"": "", "": "", "": "", "": ""}
+                        li
+                            a(href=href) 
+                                | #{text}

@@ -84,7 +84,7 @@ block content
             .container 
                 .galary__wraper
                     article.galary__title 
-                        h2 Галерея
+                        h2#galary Галерея
                     swiper-container.mySwiper.galary__blocks(pagination='true' pagination-clickable='true' space-between='30' slides-per-view='3' pagination-type="fraction")
                         swiper-slide 
                             img(src="", alt="slide 1")
@@ -101,7 +101,7 @@ block content
             .container 
                 .map__wraper 
                     article.map__title 
-                        h2 Карта местности
+                        h2#map Карта местности
                     .map__blocks 
                         img(src="", alt="Карта")
                         .map__sum 
@@ -118,7 +118,7 @@ block content
                                 h3 Общая сумма - 
                                         span 30млн
                             button(type="submit") Голосовать
-                        swiper-container.mySwiper(pagination='true' pagination-clickable='true' slides-per-view='4' space-between='10' centered-slides='true')
+                        swiper-container.mySwiper(pagination='true' pagination-clickable='true' slides-per-view='6' space-between='10' pagination-type="fraction")
                             swiper-slide Slide 1
                             swiper-slide Slide 2
                             swiper-slide Slide 3
@@ -128,3 +128,5 @@ block content
                             swiper-slide Slide 7
                             swiper-slide Slide 8
                             swiper-slide Slide 9
+        // отсчет временим до конца голосования
+        section.timer

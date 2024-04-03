@@ -5,8 +5,8 @@
   "main": "express.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon express.js",
-    "start": "node express.js"
+    "server": "nodemon ./js/express.js",
+    "start": "node ./js/express.js"
   },
   "keywords": [],
   "author": "Soshnikov Vladislav, Moseeva Victoria, Andrukova Victoria, Tushnakov Nikita (Syntax Error)",

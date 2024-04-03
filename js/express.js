@@ -6,11 +6,12 @@ const app = express()
 const PORT = process.env.PORT ?? 3000
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'static', '../index.html'))
+    res.sendFile(path.resolve(__dirname, '', '../index.html'))
 
 })
 
 app.listen(PORT, () => {
     console.log(`Server has been startred on port ${PORT}...`)
-}) 
+})
+
 

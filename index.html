@@ -17,12 +17,13 @@
   </head>
   <body>
     <div class="wraper" id="app">
+      <!-- header-->
       <header>
         <div class="header">
           <section class="header__logo"> <img src="/img/logo.png" alt=""></section>
           <nav class="header__menu">
             <div class="burger-button header__menu_button"><span class="burger-top burger"></span><span class="burger-middle burger"></span><span class="burger-bottom burger"></span></div>
-            <div class="burger-menu"><a href="index.html">Главная</a><a href="check_admin.php">Админу</a></div>
+            <div class="burger-menu"><a class="check" href="index.html">Главная</a><a href="check_admin.php">Админу</a></div>
           </nav>
         </div>
         <div class="main"> 
@@ -34,7 +35,39 @@
           <h2>Проголосуйте и вы</h2><a href="">Голосовать </a>
         </div>
       </header>
-      <main></main>
+      <!-- main-->
+      <main>
+        <!-- тнформация о проекте-->
+        <section class="info-project main__info">
+          <div class="container wraper"> 
+            <article class="info-project__text">
+              <h2 class="info-project__title" id="info-project">О проекте</h2>
+              <p class="info-project__paragraph">
+                Всероссийский конкурс 
+                лучших проектов создания
+                комфортной городской среды 
+                включен в федеральный проект 
+                «Формирование комфортной городской
+                среды» национального 
+                проекта «Жилье и городская среда».
+              </p>
+              <p class="info-project__paragraph info-project__paragraph_grean-back-dark">
+                 Конкурс проводится по 
+                поручению Президента России с 2018 года.
+              </p>
+              <p class="info-project__paragraph">
+                В нем участвуют города 
+                с численностью населения 
+                до 200 тыс. человек, 
+                а также исторические поселения 
+                федерального и регионального значения.
+              </p>
+            </article>
+            <div class="info-project__img"> <img src="/img/man.svg" alt="человек"></div>
+          </div>
+        </section>
+      </main>
+      <!-- footer-->
       <footer></footer>
     </div>
   </body>

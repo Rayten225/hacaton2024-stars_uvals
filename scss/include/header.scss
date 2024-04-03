@@ -1,3 +1,4 @@
+/* шрифты */
 @font-face {
     font-family: "IDBC";
     src: url("../font/IntroDemo-BlackCAPS.otf");
@@ -7,8 +8,10 @@
     src: url("../font/IntroDemoCond-LightCAPS.otf");
 }
 
+/* header */
 header{
     .header{
+        /* header-navigation */
         display: flex;
         padding-inline: 150px;
         justify-content: space-between;
@@ -17,6 +20,7 @@ header{
     
         &__menu{
             .burger-button {
+                 /* бургер меню */
                 position: relative;
                 z-index: 9;
                 padding: 8px;
@@ -90,6 +94,9 @@ header{
                 transition: all .2s;
                 padding-block: 20px;
             
+                &.check{
+                    background-color:#49815b;
+                }
                 &:hover{
                     background-color: #80df9e;
                     color:#000;
@@ -98,6 +105,7 @@ header{
         }
     }
     .main{
+        /* основная часть */
         background-image: url("/img/header_main_fon.jpg");
         background-size: cover;
         background-position: center;

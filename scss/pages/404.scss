@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+@import "../include/header.scss";
 
-$font-01: "Barlow",
+$font-01: "IDCLC",
 sans-serif;
-$font-02: "Barlow Condensed",
+$font-02: "IDBC",
 sans-serif;
 
 $m-01: #5B9F70;
@@ -70,7 +70,7 @@ body {
     height: auto;
     font-family: $font-01;
     background: $bg-01;
-
+    overflow: visible;
 }
 
 .logo {
@@ -169,58 +169,8 @@ nav {
                 }
             }
         }
-        .menu_icon {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            @include sm {
-                display: flex;
-            }
-            .icon {
-                width: 24px;
-                height: 2px;
-                background: white;
-                position: absolute;
-
-                &:before,
-                &:after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background: inherit;
-                    position: absolute;
-                    transition: all 0.3s cubic-bezier(0.49, 0.04, 0, 1.55);
-                }
-                &:before {
-                    transform: translateY(-8px);
-                }
-                &:after {
-                    transform: translateY(8px);
-                }
-            }
-
-            &:hover {
-                .icon {
-                    background: $m-02;
-
-                    &:before {
-                        transform: translateY(-10px);
-                    }
-
-                    &:after {
-                        transform: translateY(10px);
-                    }
-                }
-            }
-        }
     }
 }
-
 .wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -369,9 +319,8 @@ nav {
                     margin-bottom: 40px;
                     text-shadow: 6px 6px 10px $bg-03;
                 }
-                button {
-                    height: 40px;
-                    padding: 0 30px;
+                a {
+                    padding:20px 30px;
                     border-radius: 50px;
                     cursor: pointer;
                     box-shadow: 0px 15px 20px rgba($bg-02, 0.5);

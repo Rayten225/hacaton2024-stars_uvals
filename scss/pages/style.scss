@@ -248,11 +248,82 @@ main{
                 padding: 20px 40px;
                 font-family: "IDBC";
                 transition: all .2s;
+                cursor: pointer;
 
                 &:hover{
                     @include button(#49815b, #fff, 30px, 32px);
+                }           
+            }
+            .modal {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(1.1);
+                transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            }
+            .modal-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 30px;
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+
+                    div{
+                        width: 100%;
+
+                        label{
+                            color:#49815b;
+                            font-size: 20px;
+                        }
+                        input,
+                        select{
+                            width: 100%;
+                            background-color: lightgray;
+                            padding: 10px 40px;
+                            border: none;
+                            outline: none;
+                            border-radius: 15px;
+                        }
+                        button{
+                            align-self: center;
+                            font-size: 20px;
+                            padding: 10px 20px;
+                        }
+                    }
                 }
             }
+            .close-button {
+                float: right;
+                width: 1.5rem;
+                line-height: 1.5rem;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 0.25rem;
+                background-color: lightgray;
+                transition: all .2s;
+            }
+            .close-button:hover {
+                background-color: darkgray;
+            }
+            .show-modal {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1.0);
+                transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+                z-index: 9999;
+            }     
             .mySwiper{
                 grid-column: 1 / 3;
             }
@@ -319,6 +390,91 @@ main{
             .container .info-project__wraper{
                 .info-project__img img{
                     width: 300px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:930px){
+    main{
+        .info-project{
+            .container .info-project__wraper{
+                justify-content: center;
+
+                .info-project__text{
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    gap:10px;
+
+                    .info-project__paragraph{
+                        width: 90%;
+                    }
+                }
+                .info-project__img{
+                    display: none;
+                }
+            }
+        }
+        .info-mesto{
+            .info-mesto__title .container .info-mesto__title-wraper{
+                justify-content: center;
+                display: flex;
+            }
+            .container .info-mesto__wraper{
+                gap:10px;
+
+                .block{
+                    font-size: 16px;
+                    padding: 20px;
+                    color:#fff;
+                    border-radius: 15px;
+                }
+                .block3{
+                    grid-column: 1 / 3;
+                    grid-row: 2 / 3;
+                }
+                .block4{
+                    grid-row: 3 / 4;
+                    grid-column:1 / 2 ;
+                }
+                .block5{
+                    grid-row: 3 / 4;
+                    grid-column:2 / 3 ;
+                }
+                .block5,
+                .block1{
+                    background-color: #5B9F70 ;
+                }
+                .block2,
+                .block3,
+                .block4{
+                    background-color: #256037;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:880px){
+    main{
+        .galary .container .galary__wraper .galary__title{
+            display: flex;
+            justify-content: center;
+        }
+        .map .container .map__wraper{
+            .map__title{
+                display: flex;
+                justify-content: center;
+            }
+            .map__blocks{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                .map__sum{
+                    order: 2;
+                    width: 100%;
                 }
             }
         }

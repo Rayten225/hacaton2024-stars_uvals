@@ -4,7 +4,6 @@ import serverRouts from './api.js'
 
 const __dirname = path.resolve()
 const app = express()
-const PORT = process.env.PORT ?? 19705
 
 app.use(serverRouts)
 
@@ -13,8 +12,15 @@ app.get('/', (req, res) => {
 
 })
 
-app.listen(PORT, () => {
-    console.log(`Server has been startred on port ${PORT}...`)
+app.get('/qwer', (req, res) => {
+    res.send("sdvsd")
+
 })
+
+app.listen(80, () => {
+    console.log(`Server has been startred...`)
+})
+
+
 
 

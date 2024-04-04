@@ -18,7 +18,7 @@ $result = $conn->query($login);
 $password = "SELECT password FROM admin";
 $result = $conn->query($password);
 
-$row = $result->fetch_assoc()) {
+$row = $result->fetch_assoc() {
     echo "$row["login"];
 }
 

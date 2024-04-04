@@ -1,0 +1,54 @@
+extends ../layouts/error-layout.pug
+
+block title 
+    title 404
+block css 
+    link(rel="stylesheet", href="/css/404.css")
+block content 
+    // about
+    .about
+        a.bg_links.social.portfolio(href='https://www.rafaelalucas.com' target='_blank')
+            span.icon
+        a.bg_links.social.dribbble(href='https://dribbble.com/rafaelalucas' target='_blank')
+            span.icon
+        a.bg_links.social.linkedin(href='https://www.linkedin.com/in/rafaelalucas/' target='_blank')
+            span.icon
+        a.bg_links.logo
+        // end about
+        nav
+        .menu
+            p.website_name LOGO
+            .menu_links
+            a.link(href='') about
+            a.link(href='') projects
+            a.link(href='') contacts
+            .menu_icon
+            span.icon
+        section.wrapper
+        .container
+            #scene.scene(data-hover-only='false')
+            .circle(data-depth='1.2')
+            .one(data-depth='0.9')
+                .content
+                span.piece
+                span.piece
+                span.piece
+            .two(data-depth='0.60')
+                .content
+                span.piece
+                span.piece
+                span.piece
+            .three(data-depth='0.40')
+                .content
+                span.piece
+                span.piece
+                span.piece
+            p.p404(data-depth='0.50') 404
+            p.p404(data-depth='0.10') 404
+            .text
+            article
+                p
+                | Uh oh! Looks like you got lost. 
+                br
+                | Go back to the homepage if you dare!
+                button i dare!

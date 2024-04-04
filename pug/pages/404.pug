@@ -1,0 +1,32 @@
+extends ../layouts/error-layout.pug
+
+block title 
+    title 404
+block css 
+    link(rel="stylesheet", href="/css/404.css")
+block content 
+    nav
+        .menu
+            p.website_name 
+                img(src="/img/logo.png", alt="")
+            .menu_links
+                a.link(href='index.html') Главная
+                a.link(href='check_admin.php') Админу
+    section.wrapper
+        .container
+            #scene.scene(data-hover-only='false')
+                .circle(data-depth='1.2')
+                    .one(data-depth='0.9')
+                        .content
+                        span.piece
+                        span.piece
+                        span.piece
+                p.p404(data-depth='0.50') 404
+                p.p404(data-depth='0.10') 404
+            .text
+                article
+                    p
+                        | Ой-ой! Похоже, ты заблудился.
+                        br
+                        | Вернитесь на домашнюю страницу, если осмелитесь!
+                    a(href="index.html") Я смогу!

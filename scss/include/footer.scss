@@ -12,6 +12,7 @@ footer{
         align-items: center;
 
         .footer__text{
+            /* контакты */
             color:#fff;
             font-size: 24px;
             display: flex;
@@ -28,6 +29,7 @@ footer{
         }
         .footer__navigation{
             ul{
+                /* навигация по сайту */
                 display: flex;
                 flex-direction: column;
                 gap:20px;

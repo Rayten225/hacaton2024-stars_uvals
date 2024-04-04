@@ -200,6 +200,7 @@ footer .container .footer__wraper {
           align-items: center;
 }
 footer .container .footer__wraper .footer__text {
+  /* контакты */
   color: #fff;
   font-size: 24px;
   display: -webkit-box;
@@ -218,6 +219,7 @@ footer .container .footer__wraper .footer__text .op h4 {
   font-weight: 400;
 }
 footer .container .footer__wraper .footer__navigation ul {
+  /* навигация по сайту */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

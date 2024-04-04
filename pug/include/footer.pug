@@ -7,10 +7,10 @@ footer
                 .email
                     h4 Почта: grad@shadrinsk-city.ru
                 .op 
-                    h4 &copy; 2024 My Website. All rights reserves
+                    h4 &copy; 2024 This Website. All rights reserves
             nav.footer__navigation 
                 ul 
-                    each text, href in {"": "", "": "", "": "", "": ""}
+                    each text, href in {"#info-project": "О проекте", "#info-mesto": "Увалы", "#galary": "Галерея", "#map": "Карта местности"}
                         li
                             a(href=href) 
                                 | #{text}

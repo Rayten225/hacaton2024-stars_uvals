@@ -1,6 +1,7 @@
 /* footer */
 footer{
-    background-color: #256037;
+    background-image: url("/img/footer_fon.png");
+    background-size: cover;
     height: 460px;
     display: flex;
     align-items: center;
@@ -13,7 +14,7 @@ footer{
 
         .footer__text{
             /* контакты */
-            color:#fff;
+            color:#256037;
             font-size: 24px;
             display: flex;
             flex-direction: column;
@@ -26,6 +27,11 @@ footer{
                     font-weight: 400;
                 }
             }
+            .email a{
+                color:#256037;
+                font-size: 24px;
+                font-weight: 900;
+            }
         }
         .footer__navigation{
             ul{
@@ -35,11 +41,11 @@ footer{
                 gap:20px;
 
                 a{
-                    color: #fff;
+                    color: #256037;
                     font-size: 20px;
 
                     &:hover{
-                        border-bottom: 1px solid #fff;
+                        border-bottom: 1px solid #256037;
                     }
                 }
             }

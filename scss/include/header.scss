@@ -142,7 +142,7 @@ header{
                 }
             }
         }
-        h2{
+        h4{
             color: #256037;
             font-size: 52px;
         }
@@ -157,6 +157,61 @@ header{
 
             &:hover{
                 @include button(#49815b, #fff, 30px, 32px);
+            }
+        }
+    }
+}
+@media screen and (max-width:1240px){
+    header{
+        .header{
+            padding-inline: 20px;
+        }
+    }
+}
+@media screen and (max-width:860px){
+    header{
+        .main{
+            h3{
+                font-size: 24px;
+            }
+            .main__title h2{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 28px;
+            }
+            a{
+                font-size: 24px;
+                border-radius: 500px;
+
+                &:hover{
+                    @include button(#5B9F70, #fff, 500px, 24px);
+                }
+                &:active{
+                    @include button(#49815b, #fff, 500px, 24px);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:530px){
+    header{
+        .header{
+            padding-inline: 10px;
+        }
+        .main{
+            h3{
+                font-size: 20px;
+            }
+            .main__title{
+                padding: 40px 20px;
+
+                h2{
+                    font-size: 28px;
+                }
+            }
+            h4{
+                font-size: 24px;
             }
         }
     }

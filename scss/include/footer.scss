@@ -52,3 +52,12 @@ footer{
         }
     }
 }
+@media screen and (max-width:930px) {
+    footer{
+        .container .footer__wraper{
+            margin-top: 40px;
+            width: 100%;
+            gap:40px;
+        }
+    }
+}

@@ -6,18 +6,7 @@
     <title>Document</title>
 </head>
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "stars_uvals";
-    
-    // Создаем соединение
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    // Проверяем соединение
-    if ($conn->connect_error) {
-        die("Соединение с базой данных не удалось: " . $conn->connect_error);
-    }
+    include "/xampp/htdocs/hacaton2024-stars_uvals/include/connect.php";
     ////
 
     $SkiBase = "SELECT `voit`, COUNT(*) as count FROM `voits` WHERE `voit` = 'SkiBase'";

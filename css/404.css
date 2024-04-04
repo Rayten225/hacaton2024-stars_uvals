@@ -116,7 +116,7 @@ header .header__menu .burger-menu a:hover {
 }
 header .main {
   /* основная часть */
-  background-image: url("/img/header_main_fon.jpg");
+  background-image: url("../img/header_main_fon.jpg");
   background-size: cover;
   background-position: center;
   display: -webkit-box;

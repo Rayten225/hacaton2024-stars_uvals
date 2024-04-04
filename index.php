@@ -1,3 +1,6 @@
+<?php
+  include "/xampp/htdocs/hacaton2024-stars_uvals/include/connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,7 +40,7 @@
       <header>
         <!-- мини-навигация-->
         <div class="header">
-          <section class="header__logo"> <a href="index.html"> <img src="/img/logo.png" alt=""></a></section>
+          <section class="header__logo"> <a href="index.html"> <img src="img/logo.png" alt=""></a></section>
           <nav class="header__menu">
             <div class="burger-button header__menu_button"><span class="burger-top burger"></span><span class="burger-middle burger"></span><span class="burger-bottom burger"></span></div>
             <div class="burger-menu"><a class="check" href="index.html">Главная</a><a href="check_admin.php">Админу</a></div>
@@ -82,7 +85,7 @@
                   федерального и регионального значения.
                 </p>
               </article>
-              <div class="info-project__img"> <img src="/img/man.svg" alt="человек"></div>
+              <div class="info-project__img"> <img src="img/man.svg" alt="человек"></div>
             </div>
           </div>
         </section>
@@ -177,7 +180,7 @@
               <article class="map__title"> 
                 <h2 id="map">Карта местности</h2>
               </article>
-              <div class="map__blocks"> <img src="/img/map.jpg" alt="Карта">
+              <div class="map__blocks"> <img src="img/map.jpg" alt="Карта">
                 <div class="map__sum"> 
                   <h3>Сумма</h3>
                   <div class="map__sum-text sum">
@@ -303,6 +306,5 @@
         </div>
       </footer>
     </div>
-    <script src="js/express.js"></script>
   </body>
 </html>

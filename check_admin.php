@@ -1,9 +1,4 @@
 <?php
-<<<<<<< Updated upstream
-    include "/include/connect.php";
-?>
-=======
-<<<<<<< HEAD
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -53,11 +48,6 @@ echo '<h2>Не правильно введен логин или пароль</h
 
 ?>
 
-=======
-    include "/include/connect.php";
-?>
->>>>>>> 467890cc9156d3295edbd678f31dd63b001b1ec6
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,18 +56,10 @@ echo '<h2>Не правильно введен логин или пароль</h
     <title>Document</title>
 </head>
 <body>
-<<<<<<< Updated upstream
-    
-=======
-<<<<<<< HEAD
     <form action="check_admin.php" method="POST">
         <input type="text" name="log">введите логин
         <input type="password" name="pas">введите пароль
         <input type="submit">
     </form>
-=======
-    
->>>>>>> 467890cc9156d3295edbd678f31dd63b001b1ec6
->>>>>>> Stashed changes
 </body>
 </html>

@@ -156,7 +156,7 @@
               <article class="galary__title"> 
                 <h2 id="galary">Галерея</h2>
               </article>
-              <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="3" pagination-type="fraction">
+              <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="2" pagination-type="fraction">
                 <swiper-slide><img src="" alt="slide1"></swiper-slide>
                 <swiper-slide><img src="" alt="slide2"></swiper-slide>
                 <swiper-slide><img src="" alt="slide3"></swiper-slide>
@@ -192,9 +192,37 @@
                   <div class="full-sum"> 
                     <h3>Общая сумма - <span>30млн</span></h3>
                   </div>
-                  <button type="submit">Голосовать</button>
+                  <button class="trigger">Голосовать</button>
+                  <div class="modal">
+                    <div class="modal-content"><span class="close-button">&times;</span><br><br>
+                      <form action="index.php" method="post">
+                        <div> 
+                          <label for="fio">Введите ФИО :</label>
+                          <input id="fio" type="text" name="fio">
+                        </div>
+                        <div> 
+                          <label for="date">Дата рождения :</label>
+                          <input id="date" type="date" name="date">
+                        </div>
+                        <div>
+                          <label for="gen">Пол :</label>
+                          <select id="gen" name="gen">
+                            <option value="m">Муж.  </option>
+                            <option value="g">Жен.</option>
+                          </select>
+                        </div>
+                        <div> 
+                          <label for="spec">Специальность :</label>
+                          <input id="spec" type="text" name="spec">
+                        </div>
+                        <div> 
+                          <button type="submit">Проголосовать</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
-                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="5" space-between="10" pagination-type="fraction">
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
                   <swiper-slide> <img src="" alt="">
                     <div class="text"> 
                       <h4>Название - <span>цена</span></h4>

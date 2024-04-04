@@ -85,7 +85,7 @@ block content
                 .galary__wraper
                     article.galary__title 
                         h2#galary Галерея
-                    swiper-container.mySwiper.galary__blocks(pagination='true' pagination-clickable='true' space-between='10' slides-per-view='3' pagination-type="fraction")
+                    swiper-container.mySwiper.galary__blocks(pagination='true' pagination-clickable='true' space-between='10' slides-per-view='2' pagination-type="fraction")
                         swiper-slide
                             img(src="", alt="slide1")
                         swiper-slide
@@ -125,8 +125,30 @@ block content
                             .full-sum 
                                 h3 Общая сумма - 
                                         span 30млн
-                            button(type="submit") Голосовать
-                        swiper-container.mySwiper(pagination='true' pagination-clickable='true' slides-per-view='5' space-between='10' pagination-type="fraction")
+                            button.trigger Голосовать
+                            .modal
+                                .modal-content
+                                    span.close-button &times;
+                                    br
+                                    br
+                                    form(action="index.php", method="post")
+                                        div 
+                                            label(for="fio") Введите ФИО :
+                                            input#fio(type="text", name="fio")
+                                        div 
+                                            label(for="date") Дата рождения :
+                                            input#date(type="date", name="date")
+                                        div
+                                            label(for="gen") Пол :
+                                            select#gen(name="gen")
+                                                option(value="m") Муж.  
+                                                option(value="g") Жен.
+                                        div 
+                                            label(for="spec") Специальность :
+                                            input#spec(type="text", name="spec")  
+                                        div 
+                                            button(type="submit") Проголосовать
+                        swiper-container.mySwiper(pagination='true' pagination-clickable='true' slides-per-view='2' space-between='10' pagination-type="fraction")
                             swiper-slide 
                                 img(src="", alt="")
                                 .text 

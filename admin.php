@@ -1,3 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "stars_uvals";
+
+// Создаем соединение
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Проверяем соединение
+if ($conn->connect_error) {
+    die("Соединение с базой данных не удалось: " . $conn->connect_error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,20 +45,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 </head>
+
+<body>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "stars_uvals";
-
-// Создаем соединение
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Проверяем соединение
-if ($conn->connect_error) {
-    die("Соединение с базой данных не удалось: " . $conn->connect_error);
-}
-//// 
 $data = array();
 
 $Amphitheater = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Amphitheater%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
@@ -223,11 +226,11 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
 if ($result_Greenhouse->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_Greenhouse->fetch_assoc()) {
-        echo "<p></p>Голосов за: Greenhouse  " . $row['total_count'] . "";
+        echo "<p>Голосов за: Greenhouse  " . $row['total_count'] . "</p>";
         $data["Greenhouse"] = $row["total_count"];
     }
 } else {
-    echo "Greenhouse: 0 голосов<br>";
+    echo "<p>Greenhouse: 0 голосов</p>";
 }
 
 
@@ -237,11 +240,11 @@ $result_ObservationTower = mysqli_query($conn, $ObservationTower);
 if ($result_ObservationTower->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_ObservationTower->fetch_assoc()) {
-        echo "<p></p>Голосов за: ObservationTower  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: ObservationTower  " . $row['total_count'] . "</p>";
         $data["ObservationTower"] = $row["total_count"];
     }
 } else {
-    echo "ObservationTower: 0 голосов<br>";
+    echo "<p>ObservationTower: 0 голосов</p>";
 }
 
 
@@ -251,11 +254,11 @@ $result_BiathlonStadium = mysqli_query($conn, $BiathlonStadium);
 if ($result_BiathlonStadium->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_BiathlonStadium->fetch_assoc()) {
-        echo "<p></p>Голосов за: BiathlonStadium  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: BiathlonStadium  " . $row['total_count'] . "</p>";
         $data["BiathlonStadium"] = $row["total_count"];
     }
 } else {
-    echo "BiathlonStadium: 0 голосов<br>";
+    echo "<p>BiathlonStadium: 0 голосов</p>";
 }
 
 
@@ -265,11 +268,11 @@ $result_DownhillTrack = mysqli_query($conn, $DownhillTrack);
 if ($result_DownhillTrack->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_DownhillTrack->fetch_assoc()) {
-        echo "<p></p>Голосов за: DownhillTrack  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: DownhillTrack  " . $row['total_count'] . "</p>";
         $data["DownhillTrack"] = $row["total_count"];
     }
 } else {
-    echo "DownhillTrack: 0 голосов<br>";
+    echo "<p>DownhillTrack: 0 голосов</p>";
 }
 
 
@@ -279,11 +282,11 @@ $result_TubingRoute = mysqli_query($conn, $TubingRoute);
 if ($result_TubingRoute->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_TubingRoute->fetch_assoc()) {
-        echo "<p></p>Голосов за: TubingRoute  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: TubingRoute  " . $row['total_count'] . "</p>";
         $data["TubingRoute"] = $row["total_count"];
     }
 } else {
-    echo "TubingRoute: 0 голосов<br>";
+    echo "<p>TubingRoute: 0 голосов</p>";
 }
 
 
@@ -293,11 +296,11 @@ $result_EcoSchool = mysqli_query($conn, $EcoSchool);
 if ($result_EcoSchool->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_EcoSchool->fetch_assoc()) {
-        echo "<p></p>Голосов за: EcoSchool  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: EcoSchool  " . $row['total_count'] . "</p>";
         $data["EcoSchool"] = $row["total_count"];
     }
 } else {
-    echo "EcoSchool: 0 голосов<br>";
+    echo "<p>EcoSchool: 0 голосов</p>";
 }
 
 
@@ -307,11 +310,11 @@ $result_TheSpring = mysqli_query($conn, $TheSpring);
 if ($result_TheSpring->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_TheSpring->fetch_assoc()) {
-        echo "<p></p>Голосов за: TheSpring  " . $row['total_count'] . "<br>";
+        echo "<p>Голосов за: TheSpring  " . $row['total_count'] . "</p>";
         $data["TheSpring"] = $row["total_count"];
     }
 } else {
-    echo "TheSpring: 0 голосов<br>";
+    echo "<p>TheSpring: 0 голосов</p>";
 }
 
 // var_dump($data);
@@ -329,9 +332,6 @@ if ($result_TheSpring->num_rows > 0) {
 // fclose($buffer); 
 exit();
 ?>
-
-<body>
-
 </body>
 
 </html>

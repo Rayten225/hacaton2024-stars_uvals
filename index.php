@@ -158,15 +158,15 @@
                 <h2 id="galary">Галерея</h2>
               </article>
               <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="2" pagination-type="fraction">
-                <swiper-slide><img src="" alt="slide1"></swiper-slide>
-                <swiper-slide><img src="" alt="slide2"></swiper-slide>
-                <swiper-slide><img src="" alt="slide3"></swiper-slide>
-                <swiper-slide><img src="" alt="slide4"></swiper-slide>
-                <swiper-slide><img src="" alt="slide5"></swiper-slide>
-                <swiper-slide><img src="" alt="slide6"></swiper-slide>
-                <swiper-slide><img src="" alt="slide7"></swiper-slide>
-                <swiper-slide><img src="" alt="slide8"></swiper-slide>
-                <swiper-slide><img src="" alt="slide9"></swiper-slide>
+                <swiper-slide><img src="img/biathlon_stadium.png" alt="slide1"></swiper-slide>
+                <swiper-slide><img src="img/Childrens_playground.png" alt="slide2"></swiper-slide>
+                <swiper-slide><img src="img/downhill_track.png" alt="slide3"></swiper-slide>
+                <swiper-slide><img src="img/Eco-school.png" alt="slide4"></swiper-slide>
+                <swiper-slide><img src="img/Greenhouse.png" alt="slide5"></swiper-slide>
+                <swiper-slide><img src="img/pond_improvement.png" alt="slide6"></swiper-slide>
+                <swiper-slide><img src="img/Recreation_areas.png" alt="slide7"></swiper-slide>
+                <swiper-slide><img src="img/the_spring.png" alt="slide8"></swiper-slide>
+                <swiper-slide><img src="img/tubing_track.png" alt="slide9"></swiper-slide>
               </swiper-container>
             </div>
           </div>

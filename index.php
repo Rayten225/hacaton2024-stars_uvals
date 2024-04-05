@@ -11,6 +11,20 @@
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- Chatra {literal}-->
+    <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "stars_uvals";
+      
+      // Создаем соединение
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      
+      // Проверяем соединение
+      if ($conn->connect_error) {
+          die("Соединение с базой данных не удалось: " . $conn->connect_error);
+      }
+    ?>
     <script>
       (function(d, w, c) {
       w.ChatraID = 'HkjoreZ7TDjDoHKoE';
@@ -30,7 +44,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    
+
   </head>
   <body>
     <div class="wraper" id="app">
@@ -49,7 +63,13 @@
           <h3>Звездные увалы</h3>
           <aticle class="main__title"> 
             <h2>Проголосовало <span>
-                 50 </span>человек</h2>
+                 <?php
+                  $qwery = "SELECT COUNT(*) as people FROM `voits`";
+                  $result = mysqli_query($conn, $qwery);
+                  while($row = $result->fetch_assoc()){
+                  echo $row['people'];
+                  }; 
+                  ?> </span>человек</h2>
           </aticle>
           <h2>Проголосуйте и вы</h2><a href="#map">Голосовать </a>
         </div>
@@ -158,15 +178,15 @@
                 <h2 id="galary">Галерея</h2>
               </article>
               <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="2" pagination-type="fraction">
-                <swiper-slide><img src="" alt="slide1"></swiper-slide>
-                <swiper-slide><img src="" alt="slide2"></swiper-slide>
-                <swiper-slide><img src="" alt="slide3"></swiper-slide>
-                <swiper-slide><img src="" alt="slide4"></swiper-slide>
-                <swiper-slide><img src="" alt="slide5"></swiper-slide>
-                <swiper-slide><img src="" alt="slide6"></swiper-slide>
-                <swiper-slide><img src="" alt="slide7"></swiper-slide>
-                <swiper-slide><img src="" alt="slide8"></swiper-slide>
-                <swiper-slide><img src="" alt="slide9"></swiper-slide>
+                <swiper-slide><img src="img/biathlon_stadium.png" alt="slide1"></swiper-slide>
+                <swiper-slide><img src="img/Childrens_playground.png" alt="slide2"></swiper-slide>
+                <swiper-slide><img src="img/downhill_track.png" alt="slide3"></swiper-slide>
+                <swiper-slide><img src="img/Eco-school.png" alt="slide4"></swiper-slide>
+                <swiper-slide><img src="img/Greenhouse.png" alt="slide5"></swiper-slide>
+                <swiper-slide><img src="img/pond_improvement.png" alt="slide6"></swiper-slide>
+                <swiper-slide><img src="img/Recreation_areas.png" alt="slide7"></swiper-slide>
+                <swiper-slide><img src="img/the_spring.png" alt="slide8"></swiper-slide>
+                <swiper-slide><img src="img/tubing_track.png" alt="slide9"></swiper-slide>
               </swiper-container>
             </div>
           </div>
@@ -205,7 +225,7 @@
                   <button class="trigger button">Голосовать</button>
                   <div class="modal">
                     <div class="modal-content"><span class="close-button">&times;</span><br><br>
-                      <form action="index.php" method="post">
+                      <form action="check_admin.php" method="post">
                         <div> 
                           <label for="fio">Введите ФИО :</label>
                           <input id="fio" type="text" name="fio">
@@ -320,27 +340,6 @@
         </div>
       </footer>
     </div>
-    <?php 
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "stars_uvals";
-      
-      // Создаем соединение
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      
-      // Проверяем соединение
-      if ($conn->connect_error) {
-          die("Соединение с базой данных не удалось: " . $conn->connect_error);
-      }
-      //// 
-      if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
-          $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "RestPlace")';
 
-
-          $result = mysqli_query($conn, $query);
-          echo $_POST["fio"]; 
-      }
-    ?>
   </body>
 </html>

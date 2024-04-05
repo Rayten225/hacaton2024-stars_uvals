@@ -58,8 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     var img = document.createElement('img');
                     img.style.width = '50px'; img.style.height = '50px';
                     img.src = data.image;
+                    //let dataOBJ = data;
                     this.appendChild(img);
                     this.setAttribute('data-id', data.id); // устанавливаем атрибут data-id у места
+                    //document.cookie = "dataOBJ=data";
+                   // alert($_COOKIE('dataOBJ'))  // 86400 - это время в секундах, равное одному дню
                     placedObjects.push(data.id); // добавляем идентификатор объекта в массив размещенных объектов
                     document.querySelector('.message').textContent = '';
                     document.cookie = `data-id=${data.id}`;

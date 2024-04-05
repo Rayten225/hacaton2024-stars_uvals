@@ -307,6 +307,66 @@
                       <h4>Экошкола - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
+                    <img src="img/Eco-school.png" alt="">
+                    <div class="text"> 
+                      <h4>Экошкола - <span>10млн</span></h4>
+                    </div>
+                  </swiper-slide>
                 </swiper-container>
               </div>
             </div>

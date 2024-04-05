@@ -512,14 +512,64 @@ main .map .container .map__wraper .map__blocks {
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
-main .map .container .map__wraper .map__blocks img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+main .map .container .map__wraper .map__blocks .map__block {
+  background-image: url("../img/map.png");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  position: relative;
+}
+main .map .container .map__wraper .map__blocks .map__block .item {
+  width: 40px;
+  height: 40px;
+  background-color: #1eb821;
+  position: absolute;
+}
+main .map .container .map__wraper .map__blocks .map__block .item1 {
+  left: 18%;
+  top: 33%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item2 {
+  left: 10%;
+  bottom: 20%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item3 {
+  left: 27%;
+  bottom: 20%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item4 {
+  left: 35%;
+  bottom: 16%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item5 {
+  left: 48%;
+  top: 34%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item6 {
+  right: 43%;
+  bottom: 30%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item7 {
+  right: 35%;
+  bottom: 35%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item8 {
+  right: 31%;
+  bottom: 20%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item9 {
+  right: 7%;
+  bottom: 18%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item10 {
+  right: 10%;
+  bottom: 48%;
+}
+main .map .container .map__wraper .map__blocks .map__block .item11 {
+  right: 8%;
+  top: 28%;
 }
 main .map .container .map__wraper .map__blocks .map__sum {
   border-radius: 15px;

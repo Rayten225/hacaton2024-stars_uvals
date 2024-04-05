@@ -57,3 +57,13 @@
   body h2 {
     font-family: "IDBC";
   }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+  }
+  .grid p{
+    background-color: #49815b;
+    padding:20px;
+    color:#ffffff;
+  }

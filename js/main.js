@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.setAttribute('data-id', data.id); // устанавливаем атрибут data-id у места
                     placedObjects.push(data.id); // добавляем идентификатор объекта в массив размещенных объектов
                     document.querySelector('.message').textContent = '';
+                    document.cookie = `data-id=${data.id}`;
 
                     var cross = document.createElement('span');
                     cross.innerHTML = "❌";

@@ -47,6 +47,8 @@ if ($conn->connect_error) {
 </head>
 
 <body>
+    <h1>Голоса</h1>
+    <div class="grid">
 <?php
 $data = array();
 
@@ -332,6 +334,7 @@ if ($result_TheSpring->num_rows > 0) {
 // fclose($buffer); 
 exit();
 ?>
+    </div>
 </body>
 
 </html>

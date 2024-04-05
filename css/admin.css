@@ -61,9 +61,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap:10px;
+    padding-inline: 10px;
   }
   .grid p{
     background-color: #49815b;
     padding:20px;
     color:#ffffff;
+    border-radius:15px;
   }

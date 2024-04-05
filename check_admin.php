@@ -13,39 +13,35 @@ if ($conn->connect_error) {
 }
 ////
 
-if ((isset($_POST['log']))&&(isset($_POST['pas']))){
+if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
     $a = 0;
-      $query = 'SELECT `login`, `password` FROM `admin`';
-   // выполняем запрос к базе данных
-      $result = mysqli_query($conn, $query);
-        while($row = $result->fetch_assoc()){
-        if (($row['login'] == $_POST['log']) && ($row['password'] == $_POST['pas'])){
-    $a=1;
-}
-}
-
-
-if ($a==1) {
-    if ((isset($_COOKIE["log"]))&&(isset($_COOKIE["pas"]))){
-        setcookie("log", $_COOKIE["log"],time()-3600,"/");
-        setcookie("pas", $_COOKIE["logpass"],time()-3600,"/");
-        setcookie("log", $_POST['log'],time()+3600,"/");
-        setcookie("pas", $_POST['pas'],time()+3600,"/");
-        echo "cook=",$_COOKIE["log"];
-        
+    $query = 'SELECT `login`, `password` FROM `admin`';
+    // выполняем запрос к базе данных
+    $result = mysqli_query($conn, $query);
+    while ($row = $result->fetch_assoc()) {
+        if (($row['login'] == $_POST['log']) && ($row['password'] == $_POST['pas'])) {
+            $a = 1;
+        }
     }
-    else {
-        setcookie("log", $_POST['log'],time()+3600,"/");
-        setcookie("pas", $_POST['pas'],time()+3600,"/");
-    } 
-    $new_url = 'admin.php';
-    header('Location: '.$new_url);
-}else{
-echo '<h2>Не правильно введен логин или пароль</h2>';
 
-}
-}
+    if ($a == 1) {
+        if ((isset($_COOKIE["log"])) && (isset($_COOKIE["pas"]))) {
+            setcookie("log", $_COOKIE["log"], time() - 3600, "/");
+            setcookie("pas", $_COOKIE["logpass"], time() - 3600, "/");
+            setcookie("log", $_POST['log'], time() + 3600, "/");
+            setcookie("pas", $_POST['pas'], time() + 3600, "/");
+            echo "cook=", $_COOKIE["log"];
+        } else {
+            setcookie("log", $_POST['log'], time() + 3600, "/");
+            setcookie("pas", $_POST['pas'], time() + 3600, "/");
+        }
 
+        $new_url = 'admin.php';
+        header('Location: ' . $new_url);
+    } else {
+        echo '<h2>Не правильно введен логин или пароль</h2>';
+    }
+}
 ?>
     <?php 
       if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
@@ -59,16 +55,53 @@ echo '<h2>Не правильно введен логин или пароль</h
     ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Проверочка</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/check_admin.css">
+    <!-- JS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Chatra {literal}-->
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'HkjoreZ7TDjDoHKoE';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+        // /Chatra {/literal}
+    </script>
+    <!-- FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 </head>
+
 <body>
     <form action="check_admin.php" method="POST">
-        <input type="text" name="log">введите логин
-        <input type="password" name="pas">введите пароль
-        <input type="submit">
+        <div class="block">
+            <label for="log">Log-in : </label>
+            <input type="text" name="log" id="log">
+        </div>
+        <div class="block">
+            <label for="pas">Password : </label>
+            <input type="password" name="pas" id="pas">
+        </div>
+        <div class="block_button">
+            <button type="submit">Войти</button>
+            <a href="index.php">На главную</a>
+        </div>
     </form>
 </body>
+
 </html>

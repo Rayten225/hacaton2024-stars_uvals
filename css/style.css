@@ -890,6 +890,9 @@ main .timer {
         -ms-flex-align: center;
             align-items: center;
   }
+  main .map .container .map__wraper .map__blocks .places{
+    height: 800px;
+  }
   main .map .container .map__wraper .map__blocks .map__sum {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;

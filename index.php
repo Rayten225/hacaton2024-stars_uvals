@@ -253,55 +253,55 @@
                   </div>
                 </div>
                 <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="10" pagination-type="fraction">
-                  <swiper-slide class="object" data-object='{"id": 1, "name": "Благоустройство рудника", "price": "₽4", "image": "img/the_spring.png"}'>
+                  <swiper-slide class="object" data-object='{"id": 1, "name": "Благоустройство рудника", "price": "₽4", "image": "img/the_spring.png", "value": "Mine improvement"}'>
                     <img src="img/the_spring.png" alt="">
                     <div class="text"> 
                       <h4>Благоустройство рудника - <span>4 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 2, "name": "Благоустройство пруда", "price": "₽12.5", "image": "img/pond_improvement.png"}'> 
+                  <swiper-slide class="object"  data-object='{"id": 2, "name": "Благоустройство пруда", "price": "₽12.5", "image": "img/pond_improvement.png", "value": ""}'> 
                     <img src="img/pond_improvement.png" alt="">
                     <div class="text"> 
                       <h4>Благоустройство пруда (расчистка, устройство настила, установка МАФ) - <span>12.5 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 3, "name": "Биатлонный стадион", "price": "₽25", "image": "img/biathlon_stadium.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 3, "name": "Биатлонный стадион", "price": "₽25", "image": "img/biathlon_stadium.png", "value": ""}'> 
                     <img src="img/biathlon_stadium.png" alt="">
                     <div class="text"> 
                       <h4>Биатлонный стадион - <span>25 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 4, "name": "Трасса даунхилла", "price": "₽2.5", "image": "img/downhill_track.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 4, "name": "Трасса даунхилла", "price": "₽2.5", "image": "img/downhill_track.png", "value": ""}'> 
                     <img src="img/downhill_track.png" alt="">
                     <div class="text"> 
                       <h4>Трасса даунхилла - <span>2.5 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 5, "name": "Трасса даунхилла", "price": "₽10", "image": "img/tubing_track.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 5, "name": "Трасса даунхилла", "price": "₽10", "image": "img/tubing_track.png", "value": ""}'> 
                     <img src="img/tubing_track.png" alt="">
                     <div class="text"> 
                       <h4>Трасса для тюбингов (без подъемника) - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 6, "name": "Трасса для тюбингов (c подъемником)", "price": "₽18", "image": "img/Tubing_track_The_lift.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 6, "name": "Трасса для тюбингов (c подъемником)", "price": "₽18", "image": "img/Tubing_track_The_lift.png", "value": ""}'> 
                     <img src="img/Tubing_track_The_lift.png" alt="">
                     <div class="text"> 
                       <h4>Трасса для тюбингов (c подъемником) - <span>18млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 7, "name": "Детская площадка", "price": "₽20", "image": "img/Childrens_playground.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 7, "name": "Детская площадка", "price": "₽20", "image": "img/Childrens_playground.png", "value": ""}'> 
                     <img src="img/Childrens_playground.png" alt="">
                     <div class="text"> 
                       <h4>Детская площадка - <span>20млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 8, "name": "Оранжерея (ботанический сад)", "price": "₽0.3", "image": "img/Greenhouse.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 8, "name": "Оранжерея (ботанический сад)", "price": "₽0.3", "image": "img/Greenhouse.png", "value": ""}'> 
                     <img src="img/Greenhouse.png" alt="">
                     <div class="text"> 
                       <h4>Оранжерея (ботанический сад) - <span>300тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png", "value": ""}'> 
                     <img src="img/Eco-school.png" alt="">
                     <div class="text"> 
                       <h4>Экошкола - <span>10млн</span></h4>

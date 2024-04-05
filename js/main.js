@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateTotalCost() {
-        totalCostBlock.textContent = 'Общая сумма: ' + totalCost.toFixed(2);
+        totalCostBlock.textContent = 'Общая сумма: ' + totalCost.toFixed(2)  +  'млн';
 
         // Проверка на превышение общей стоимости
         if (totalCost > 75) {

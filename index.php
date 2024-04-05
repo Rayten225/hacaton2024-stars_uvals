@@ -286,8 +286,6 @@
             </div>
           </div>
         </section>
-        <!-- отсчет временим до конца голосования-->
-        <section class="timer"></section>
       </main>
       <!-- footer-->
       <footer>
@@ -316,5 +314,28 @@
         </div>
       </footer>
     </div>
+    <?php 
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "stars_uvals";
+      
+      // Создаем соединение
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      
+      // Проверяем соединение
+      if ($conn->connect_error) {
+          die("Соединение с базой данных не удалось: " . $conn->connect_error);
+      }
+      //// 
+      if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
+          // $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, $_POST[`fio`], $_POST[`date`], $_POST[`gen`], $_POST[`spec`], "RestingPlace")';
+          $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "RestPlace")';
+
+
+          $result = mysqli_query($conn, $query);
+          echo $_POST["fio"]; 
+      }
+    ?>
   </body>
 </html>

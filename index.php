@@ -1,6 +1,3 @@
-<?php
-  include "/xampp/htdocs/hacaton2024-stars_uvals/include/connect.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -180,7 +177,20 @@
               <article class="map__title"> 
                 <h2 id="map">Карта местности</h2>
               </article>
-              <div class="map__blocks"> <img src="img/map.jpg" alt="Карта">
+              <div class="map__blocks"> 
+                <div class="map__block">
+                  <div class="item item1"> </div>
+                  <div class="item item2"> </div>
+                  <div class="item item3"> </div>
+                  <div class="item item4"> </div>
+                  <div class="item item5"> </div>
+                  <div class="item item6"> </div>
+                  <div class="item item7"> </div>
+                  <div class="item item8"> </div>
+                  <div class="item item9"> </div>
+                  <div class="item item10"> </div>
+                  <div class="item item11"> </div>
+                </div>
                 <div class="map__sum"> 
                   <h3>Сумма</h3>
                   <div class="map__sum-text sum">

@@ -195,12 +195,66 @@ main{
             grid-template-columns: 2fr 1fr;
             gap:20px;
 
-            img{
-                object-fit: cover;
-                object-position: center bottom;
+            .map__block{
+                background-image: url("../img/map.png");
+                background-size: cover;
+                background-position:center;
                 width:100%;
                 height: 100%;
                 border-radius: 15px;
+                position: relative;
+
+                .item{
+                    width: 40px;
+                    height: 40px;
+                    background-color: #1eb821;
+                    position: absolute;
+
+                    &1{
+                        left:18%;
+                        top:33%;
+                    }
+                    &2{
+                        left:10%;
+                        bottom:20%;
+                    }
+                    &3{
+                        left:27%;
+                        bottom:20%;
+                    }
+                    &4{
+                        left:35%;
+                        bottom:16%;
+                    }
+                    &5{
+                        left:48%;
+                        top:34%;
+                    }
+                    &6{
+                        right:43%;
+                        bottom:30%;
+                    }
+                    &7{
+                        right:35%;
+                        bottom:35%;
+                    }
+                    &8{
+                        right:31%;
+                        bottom:20%;
+                    }
+                    &9{
+                        right:7%;
+                        bottom:18%;
+                    }
+                    &10{
+                        right:10%;
+                        bottom:48%;
+                    }
+                    &11{
+                        right:8%;
+                        top:28%;
+                    }
+                }
             }
             .map__sum{
                 border-radius: 15px;

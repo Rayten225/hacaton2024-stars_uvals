@@ -1,0 +1,20 @@
+{
+  "name": "hacaton2024-stars_uvals",
+  "version": "1.0.0",
+  "description": "project on hakaton",
+  "main": "express.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon ./js/express.js",
+    "start": "node ./js/express.js"
+  },
+  "keywords": [],
+  "author": "Soshnikov Vladislav, Moseeva Victoria, Andrukova Victoria, Tushnakov Nikita (Syntax Error)",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "vue": "^3.4.21"
+  }
+}

@@ -44,7 +44,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    
+
   </head>
   <body>
     <div class="wraper" id="app">
@@ -69,7 +69,6 @@
                   while($row = $result->fetch_assoc()){
                   echo $row['people'];
                   }; 
-                  echo $_COOKIE['dataOBJ'];
                   ?> </span>человек</h2>
           </aticle>
           <h2>Проголосуйте и вы</h2><a href="#map">Голосовать </a>

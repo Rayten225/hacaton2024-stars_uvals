@@ -225,8 +225,8 @@
                     </div>
                   </div>
                 </div>
-                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
-                  <swiper-slide> <img src="" alt="">
+                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
+                  <swiper-slide class="object" data-object='{"id": 1, "name": "Object 1", "price": "$10", "image": "https://via.placeholder.com/50"}'> <img src="" alt="">
                     <div class="text"> 
                       <h4>Название - <span>цена</span></h4>
                     </div>

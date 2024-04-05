@@ -325,7 +325,7 @@ if ($result_TheSpring->num_rows > 0) {
 // header("Expires: 0"); 
 
 // $buffer = fopen(__DIR__ . '/file.csv', 'w'); 
-// fputs($buffer, chr(0xEF) . chr(0xBB) . chr(0xBF));
+// fputs(ёbuffer, chr(0xEF) . chr(0xBB) . chr(0xBF));
 // foreach($data as $val) { 
 // 	fputcsv($buffer, $val, ';'); 
 // } 

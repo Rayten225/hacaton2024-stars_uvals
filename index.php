@@ -11,6 +11,20 @@
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- Chatra {literal}-->
+    <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "stars_uvals";
+      
+      // Создаем соединение
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      
+      // Проверяем соединение
+      if ($conn->connect_error) {
+          die("Соединение с базой данных не удалось: " . $conn->connect_error);
+      }
+    ?>
     <script>
       (function(d, w, c) {
       w.ChatraID = 'HkjoreZ7TDjDoHKoE';
@@ -48,7 +62,14 @@
           <h3>Звездные увалы</h3>
           <aticle class="main__title"> 
             <h2>Проголосовало <span>
-                 50 </span>человек</h2>
+                 <?php
+                  $qwery = "SELECT COUNT(*) as people FROM `voits`";
+                  $result = mysqli_query($conn, $qwery);
+                  while($row = $result->fetch_assoc()){
+                  echo $row['people'];
+                  }; 
+                  echo $_COOKIE['dataOBJ'];
+                  ?> </span>человек</h2>
           </aticle>
           <h2>Проголосуйте и вы</h2><a href="#map">Голосовать </a>
         </div>
@@ -204,7 +225,7 @@
                   <button class="trigger button">Голосовать</button>
                   <div class="modal">
                     <div class="modal-content"><span class="close-button">&times;</span><br><br>
-                      <form action="index.php" method="post">
+                      <form action="check_admin.php" method="post">
                         <div> 
                           <label for="fio">Введите ФИО :</label>
                           <input id="fio" type="text" name="fio">
@@ -319,27 +340,6 @@
         </div>
       </footer>
     </div>
-    <?php 
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "stars_uvals";
-      
-      // Создаем соединение
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      
-      // Проверяем соединение
-      if ($conn->connect_error) {
-          die("Соединение с базой данных не удалось: " . $conn->connect_error);
-      }
-      //// 
-      if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
-          $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "RestPlace")';
 
-
-          $result = mysqli_query($conn, $query);
-          echo $_POST["fio"]; 
-      }
-    ?>
   </body>
 </html>

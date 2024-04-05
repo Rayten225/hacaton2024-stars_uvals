@@ -290,17 +290,17 @@ echo "TheSpring: 0 голосов<br>";
 
 // var_dump($data);
 
-header("Content-type: text/csv"); 
-header("Content-Disposition: attachment; filename=file.csv"); 
-header("Pragma: no-cache"); 
-header("Expires: 0"); 
+// header("Content-type: text/csv"); 
+// header("Content-Disposition: attachment; filename=file.csv"); 
+// header("Pragma: no-cache"); 
+// header("Expires: 0"); 
 
-$buffer = fopen(__DIR__ . '/file.csv', 'w'); 
-fputs($buffer, chr(0xEF) . chr(0xBB) . chr(0xBF));
-foreach($data as $val) { 
-	fputcsv($buffer, $val, ';'); 
-} 
-fclose($buffer); 
+// $buffer = fopen(__DIR__ . '/file.csv', 'w'); 
+// fputs($buffer, chr(0xEF) . chr(0xBB) . chr(0xBF));
+// foreach($data as $val) { 
+// 	fputcsv($buffer, $val, ';'); 
+// } 
+// fclose($buffer); 
 exit();
 ?>
 <body>

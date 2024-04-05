@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- JS-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/main.js" defer=""></script>
+    <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- Chatra {literal}-->
     <script>
@@ -178,34 +178,30 @@
                 <h2 id="map">Карта местности</h2>
               </article>
               <div class="map__blocks"> 
-                <div class="map__block">
-                  <div class="item item1"> </div>
-                  <div class="item item2"> </div>
-                  <div class="item item3"> </div>
-                  <div class="item item4"> </div>
-                  <div class="item item5"> </div>
-                  <div class="item item6"> </div>
-                  <div class="item item7"> </div>
-                  <div class="item item8"> </div>
-                  <div class="item item9"> </div>
-                  <div class="item item10"> </div>
-                  <div class="item item11"> </div>
+                <div class="map__block places">
+                  <div class="item item1 place" data-place="1"> </div>
+                  <div class="item item2 place" data-place="2"> </div>
+                  <div class="item item3 place" data-place="3"> </div>
+                  <div class="item item4 place" data-place="4"> </div>
+                  <div class="item item5 place" data-place="5"> </div>
+                  <div class="item item6 place" data-place="6"> </div>
+                  <div class="item item7 place" data-place="7"> </div>
+                  <div class="item item8 place" data-place="8"> </div>
+                  <div class="item item9 place" data-place="9"> </div>
+                  <div class="item item10 place" data-place="10"> </div>
+                  <div class="item item11 place" data-place="11"> </div>
                 </div>
                 <div class="map__sum"> 
                   <h3>Сумма</h3>
-                  <div class="map__sum-text sum">
-                    <div> 
-                      <h4>Название - <span>сумма</span></h4>
-                    </div>
-                    <div> 
-                      <h4>Название - <span>сумма</span></h4>
-                    </div>
+                  <div class="map__sum-text sum info" style="display: none; font-size: 20px;">
+                    <!-- информация об объектах -->
                   </div>
                   <hr>
                   <div class="full-sum"> 
-                    <h3>Общая сумма - <span>30млн</span></h3>
+                    <div class="message"></div>
+                    <h3 class="total-cost">Общая сумма - <span>0 млн</span></h3>
                   </div>
-                  <button class="trigger">Голосовать</button>
+                  <button class="trigger button">Голосовать</button>
                   <div class="modal">
                     <div class="modal-content"><span class="close-button">&times;</span><br><br>
                       <form action="index.php" method="post">
@@ -235,50 +231,59 @@
                     </div>
                   </div>
                 </div>
-                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
-                  <swiper-slide class="object" data-object='{"id": 1, "name": "Object 1", "price": "$10", "image": "https://via.placeholder.com/50"}'> <img src="" alt="">
+                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="10" pagination-type="fraction">
+                  <swiper-slide class="object" data-object='{"id": 1, "name": "Благоустройство рудника", "price": "₽4", "image": "img/the_spring.png"}'>
+                    <img src="img/the_spring.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Благоустройство рудника - <span>4 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 2, "name": "Благоустройство пруда", "price": "₽12.5", "image": "img/pond_improvement.png"}'> 
+                    <img src="img/pond_improvement.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Благоустройство пруда (расчистка, устройство настила, установка МАФ) - <span>12.5 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 3, "name": "Биатлонный стадион", "price": "₽25", "image": "img/biathlon_stadium.png"}'> 
+                    <img src="img/biathlon_stadium.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Биатлонный стадион - <span>25 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 4, "name": "Трасса даунхилла", "price": "₽2.5", "image": "img/downhill_track.png"}'> 
+                    <img src="img/downhill_track.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Трасса даунхилла - <span>2.5 млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 5, "name": "Трасса даунхилла", "price": "₽10", "image": "img/tubing_track.png"}'> 
+                    <img src="img/tubing_track.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Трасса для тюбингов (без подъемника) - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 6, "name": "Трасса для тюбингов (c подъемником)", "price": "₽18", "image": "img/Tubing_track_The_lift.png"}'> 
+                    <img src="img/Tubing_track_The_lift.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Трасса для тюбингов (c подъемником) - <span>18млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 7, "name": "Детская площадка", "price": "₽20", "image": "img/Childrens_playground.png"}'> 
+                    <img src="img/Childrens_playground.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Детская площадка - <span>20млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 8, "name": "Оранжерея (ботанический сад)", "price": "₽0.3", "image": "img/Greenhouse.png"}'> 
+                    <img src="img/Greenhouse.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Оранжерея (ботанический сад) - <span>300тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide><img src="" alt="">
+                  <swiper-slide class="object" data-object='{"id": 9, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
+                    <img src="img/Eco-school.png" alt="">
                     <div class="text"> 
-                      <h4>Название - <span>цена</span></h4>
+                      <h4>Экошкола - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
                 </swiper-container>
@@ -286,8 +291,6 @@
             </div>
           </div>
         </section>
-        <!-- отсчет временим до конца голосования-->
-        <section class="timer"></section>
       </main>
       <!-- footer-->
       <footer>

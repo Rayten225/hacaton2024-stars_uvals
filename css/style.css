@@ -522,10 +522,13 @@ main .map .container .map__wraper .map__blocks .map__block {
   position: relative;
 }
 main .map .container .map__wraper .map__blocks .map__block .item {
-  width: 40px;
-  height: 40px;
-  background-color: #1eb821;
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border: 2px solid #5B9F70;
+  border-radius: 5px ;
   position: absolute;
+  cursor: pointer;
 }
 main .map .container .map__wraper .map__blocks .map__block .item1 {
   left: 18%;
@@ -584,7 +587,7 @@ main .map .container .map__wraper .map__blocks .map__sum {
   gap: 40px;
   padding: 20px;
 }
-main .map .container .map__wraper .map__blocks .map__sum h3 {
+main .map .container .map__wraper .map__blocks .map__sum {
   color: #5B9F70;
   font-size: 48px;
   font-weight: 400;
@@ -599,6 +602,9 @@ main .map .container .map__wraper .map__blocks .map__sum .sum div h4 span {
 main .map .container .map__wraper .map__blocks .map__sum hr {
   background: #5B9F70;
   height: 2px;
+}
+main .map .container .map__wraper .map__blocks .full-sum{
+  height: 250px;
 }
 main .map .container .map__wraper .map__blocks .full-sum h3 {
   font-size: 32px;
@@ -746,6 +752,8 @@ main .map .container .map__wraper .map__blocks swiper-container swiper-slide {
   height: 400px;
   border-radius: 15px;
   overflow: visible;
+  padding-bottom: 40px;
+  cursor: pointer;
 }
 main .map .container .map__wraper .map__blocks swiper-container swiper-slide img {
   display: block;

@@ -1,6 +1,6 @@
-let app = new Vue ({
+let app = new Vue({
     el: "#app",
-    data () {
+    data() {
         return {
             message: 'Прив'
         }
@@ -12,8 +12,8 @@ const burgerButton = document.querySelector('.burger-button');
 const burgerMenu = document.querySelector('.burger-menu')
 
 function toggleBurger() {
-  burgerButton.classList.toggle('active')
-  burgerMenu.classList.toggle('active')
+    burgerButton.classList.toggle('active')
+    burgerMenu.classList.toggle('active')
 }
 
 burgerButton.addEventListener('click', toggleBurger)
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateTotalCost() {
         totalCostBlock.textContent = 'Общая сумма: ' + totalCost.toFixed(2);
-        
+
         // Проверка на превышение общей стоимости
         if (totalCost > 75) {
             totalCostBlock.style.color = 'red'; // подсвечиваем красным
@@ -68,12 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     cross.classList.add('delete');
                     this.appendChild(cross);
 
-                    cross.addEventListener('click', function(e) {
+                    cross.addEventListener('click', function (e) {
                         e.stopPropagation();
                         var parentElement = this.parentElement; // сохраняем ссылку на родительский элемент
                         parentElement.removeChild(this.previousElementSibling); // удаляем изображение
                         parentElement.removeChild(this); // удаляем кнопку удаления
                         parentElement.removeAttribute('data-id'); // удаляем атрибут data-id у места
+
                         // Удаляем информацию об этом объекте из блока .info
                         var objectName = data.name;
                         var infoObjects = document.querySelectorAll('.info p');
@@ -141,14 +142,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
     // Обработчик нажатия на кнопку
-    document.querySelector('.button').addEventListener('click', function() {
+    trigger.addEventListener('click', function () {
         // Проверяем, превышает ли общая стоимость 75
         if (totalCost > 75) {
             document.querySelector('.message').textContent = 'Поменяйте сумму';
         } else {
-            document.querySelector('.message').textContent = 'Вы вошли';
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
         }
     });
 });
@@ -156,20 +170,5 @@ document.addEventListener('DOMContentLoaded', function () {
 // -------------------------------------------
 
 //  modal window
-var modal = document.querySelector(".modal");
-var trigger = document.querySelector(".trigger");
-var closeButton = document.querySelector(".close-button");
 
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
 
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);

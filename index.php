@@ -1,3 +1,17 @@
+<?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "stars_uvals";
+      
+      // Создаем соединение
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      
+      // Проверяем соединение
+      if ($conn->connect_error) {
+          die("Соединение с базой данных не удалось: " . $conn->connect_error);
+      }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,20 +25,6 @@
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- Chatra {literal}-->
-    <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "stars_uvals";
-      
-      // Создаем соединение
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      
-      // Проверяем соединение
-      if ($conn->connect_error) {
-          die("Соединение с базой данных не удалось: " . $conn->connect_error);
-      }
-    ?>
     <script>
       (function(d, w, c) {
       w.ChatraID = 'HkjoreZ7TDjDoHKoE';
@@ -400,6 +400,5 @@
         </div>
       </footer>
     </div>
-
   </body>
 </html>

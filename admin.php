@@ -135,7 +135,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
 
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%9%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -144,7 +144,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%10%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -153,7 +153,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%11%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -162,7 +162,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
 
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%12%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -171,7 +171,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
 
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%13%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -180,7 +180,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%14%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -189,7 +189,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%15%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -198,7 +198,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
 
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%16%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -207,7 +207,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%17%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов
@@ -216,7 +216,7 @@ $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     }
 
     
-$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%18%'";
 $result_Greenhouse = mysqli_query($conn, $Greenhouse);
     
     // Выводим количество одинаковых слов

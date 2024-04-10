@@ -62,272 +62,59 @@ if ($conn->connect_error) {
                 <?php
 $data = array();
 
-$Amphitheater = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Amphitheater%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_Amphitheater = mysqli_query($conn, $Amphitheater);
+$MineImprovement = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%1%'";
+$result_MineImprovement = mysqli_query($conn, $MineImprovement);
 
-if ($result_Amphitheater->num_rows > 0) {
     // Выводим количество одинаковых слов
-    while ($row = $result_Amphitheater->fetch_assoc()) {
-        echo "<h4>Голосов за: Amphitheater  " . $row['total_count'] . "</h4>";
-        array_push($data, ["Amphitheater", $row['total_count']]);
-        $data["Amphitheater"] = $row["total_count"];
+    while ($row = $result_MineImprovement->fetch_assoc()) {
+        echo "<h4>Голосов за: Благоустроиство рудника  " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>Amphitheater: 0 голосов</h4>";
-}
 
 
-$ArtPark = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%ArtPark%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_ArtPark = mysqli_query($conn, $ArtPark);
+$PondLandscaping = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%2%'";
+$result_PondLandscaping = mysqli_query($conn, $PondLandscaping);
 
-if ($result_ArtPark->num_rows > 0) {
     // Выводим количество одинаковых слов
-    while ($row = $result_ArtPark->fetch_assoc()) {
-        echo "<h4>Голосов за: ArtPark  " . $row['total_count'] . "</h4>";
-        array_push($data, ["ArtPark", $row['total_count']]);
-        $data["ArtPark"] = $row["total_count"];
+    while ($row = $result_PondLandscaping->fetch_assoc()) {
+        echo "<h4>Голосов за: Благоустройство пруда  " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>ArtPark: 0 голосов</h4>";
-}
 
-
-$Gazebos = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Gazebos%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_Gazebos = mysqli_query($conn, $Gazebos);
-
-if ($result_Gazebos->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_Gazebos->fetch_assoc()) {
-        echo "<h4>Голосов за: Gazebos  " . $row['total_count'] . "</h4>";
-        $data["Gazebos"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>Gazebos: 0 голосов</h4>";
-}
-
-
-$WorkshopArea = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%WorkshopArea%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_WorkshopArea = mysqli_query($conn, $WorkshopArea);
-
-if ($result_WorkshopArea->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_WorkshopArea->fetch_assoc()) {
-        echo "<h4>Голосов за: WorkshopArea  " . $row['total_count'] . "</h4>";
-        $data["WorkshopArea"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>WorkshopArea: 0 голосов</h4>";
-}
-
-
-$Glamping = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Glamping%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_Glamping = mysqli_query($conn, $Glamping);
-
-if ($result_Glamping->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_Glamping->fetch_assoc()) {
-        echo "<h4>Голосов за: Glamping  " . $row['total_count'] . "</h4>";
-        $data["Glamping"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>Glamping: 0 голосов</h4>";
-}
-
-
-$ChildrensPlayground = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%ChildrensPlayground%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_ChildrensPlayground = mysqli_query($conn, $ChildrensPlayground);
-
-if ($result_ChildrensPlayground->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_ChildrensPlayground->fetch_assoc()) {
-        echo "<h4>Голосов за: ChildrensPlayground  " . $row['total_count'] . "</h4>";
-        $data["ChildrensPlayground"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>ChildrensPlayground: 0 голосов</h4>";
-}
-
-
-$Houses = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Houses%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_Houses = mysqli_query($conn, $Houses);
-
-if ($result_Houses->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_Houses->fetch_assoc()) {
-        echo "<h4>Голосов за: Houses  " . $row['total_count'] . "</h4>";
-        $data["Houses"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>Houses: 0 голосов</h4>";
-}
-
-
-$SkiBase = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%SkiBase%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_SkiBase = mysqli_query($conn, $SkiBase);
-
-if ($result_SkiBase->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_SkiBase->fetch_assoc()) {
-        echo "<h4>Голосов за: SkiBase  " . $row['total_count'] . "</h4>";
-        $data["SkiBase"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>SkiBase: 0 голосов</h4>";
-}
-
-
-$PicnicArea = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%PicnicArea%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_PicnicArea = mysqli_query($conn, $PicnicArea);
-
-if ($result_PicnicArea->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_PicnicArea->fetch_assoc()) {
-        echo "<h4>Голосов за: PicnicArea  " . $row['total_count'] . "</h4>";
-        $data["PicnicArea"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>PicnicArea: 0 голосов</h4>";
-}
-
-
-$RestingPlace = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%RestingPlace%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_RestingPlace = mysqli_query($conn, $RestingPlace);
-
-if ($result_RestingPlace->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_RestingPlace->fetch_assoc()) {
-        echo "<h4>Голосов за: RestingPlace  " . $row['total_count'] . "</h4>";
-        $data["RestingPlace"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>RestingPlace: 0 голосов</h4>";
-}
-
-
-$MiniZoo = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%MiniZoo%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_MiniZoo = mysqli_query($conn, $MiniZoo);
-
-if ($result_MiniZoo->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_MiniZoo->fetch_assoc()) {
-        echo "<h4>Голосов за: MiniZoo  " . $row['total_count'] . "</h4>";
-        $data["MiniZoo"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>MiniZoo: 0 голосов</h4>";
-}
-
-
-$PondArrangement = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%PondArrangement%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_PondArrangement = mysqli_query($conn, $PondArrangement);
-
-if ($result_PondArrangement->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_PondArrangement->fetch_assoc()) {
-        echo "<h4>Голосов за: PondArrangement  " . $row['total_count'] . "</h4>";
-        $data["PondArrangement"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>PondArrangement: 0 голосов</h4>";
-}
-
-
-$Greenhouse = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%Greenhouse%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_Greenhouse = mysqli_query($conn, $Greenhouse);
-
-if ($result_Greenhouse->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_Greenhouse->fetch_assoc()) {
-        echo "<h4>Голосов за: Greenhouse  " . $row['total_count'] . "</h4>";
-        $data["Greenhouse"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>Greenhouse: 0 голосов</h4>";
-}
-
-
-$ObservationTower = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%ObservationTower%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_ObservationTower = mysqli_query($conn, $ObservationTower);
-
-if ($result_ObservationTower->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_ObservationTower->fetch_assoc()) {
-        echo "<h4>Голосов за: ObservationTower  " . $row['total_count'] . "</h4>";
-        $data["ObservationTower"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>ObservationTower: 0 голосов</h4>";
-}
 
 
 $BiathlonStadium = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%3%'";
 $result_BiathlonStadium = mysqli_query($conn, $BiathlonStadium);
 
-if ($result_BiathlonStadium->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_BiathlonStadium->fetch_assoc()) {
-        echo "<h4>Голосов за: BiathlonStadium  " . $row['count'] . "</h4>";
-        $data["BiathlonStadium"] = $row["total_count"];
+        echo "<h4>Голосов за: Биатлонный стадион  " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>BiathlonStadium: 0 голосов</h4>";
-}
 
 
-$DownhillTrack = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%DownhillTrack%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
+$DownhillTrack = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%4%'";
 $result_DownhillTrack = mysqli_query($conn, $DownhillTrack);
 
-if ($result_DownhillTrack->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_DownhillTrack->fetch_assoc()) {
-        echo "<h4>Голосов за: DownhillTrack  " . $row['total_count'] . "</h4>";
-        $data["DownhillTrack"] = $row["total_count"];
+        echo "<h4>Голосов за: Трасса даунхилла  " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>DownhillTrack: 0 голосов</h4>";
-}
 
 
-$TubingRoute = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%TubingRoute%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_TubingRoute = mysqli_query($conn, $TubingRoute);
-
-if ($result_TubingRoute->num_rows > 0) {
+$TubingTrack = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%5%'";
+$result_TubingTrack = mysqli_query($conn, $TubingTrack);
+    
     // Выводим количество одинаковых слов
-    while ($row = $result_TubingRoute->fetch_assoc()) {
-        echo "<h4>Голосов за: TubingRoute  " . $row['total_count'] . "</h4>";
-        $data["TubingRoute"] = $row["total_count"];
+    while ($row = $result_TubingTrack->fetch_assoc()) {
+        echo "<h4>Голосов за: Трасса для тюбингов  " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>TubingRoute: 0 голосов</h4>";
-}
 
 
-$EcoSchool = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%EcoSchool%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_EcoSchool = mysqli_query($conn, $EcoSchool);
-
-if ($result_EcoSchool->num_rows > 0) {
+$TubingTrack = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%6%'";
+$result_TubingTrack = mysqli_query($conn, $TubingTrack);
+    
     // Выводим количество одинаковых слов
-    while ($row = $result_EcoSchool->fetch_assoc()) {
-        echo "<h4>Голосов за: EcoSchool  " . $row['total_count'] . "</h4>";
-        $data["EcoSchool"] = $row["total_count"];
+    while ($row = $result_TubingTrack->fetch_assoc()) {
+        echo "<h4>Голосов за: Трасса для тюбингов с подьемом " . $row['count'] . "</h4>";
     }
-} else {
-    echo "<h4>EcoSchool: 0 голосов</h4>";
-}
-
-
-$TheSpring = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%TheSpring%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
-$result_TheSpring = mysqli_query($conn, $TheSpring);
-
-if ($result_TheSpring->num_rows > 0) {
-    // Выводим количество одинаковых слов
-    while ($row = $result_TheSpring->fetch_assoc()) {
-        echo "<h4>Голосов за: TheSpring  " . $row['total_count'] . "</h4>";
-        $data["TheSpring"] = $row["total_count"];
-    }
-} else {
-    echo "<h4>TheSpring: 0 голосов</h4>";
-}
                 ?>
             </div>
         </div>

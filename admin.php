@@ -104,16 +104,124 @@ $result_TubingTrack = mysqli_query($conn, $TubingTrack);
     
     // Выводим количество одинаковых слов
     while ($row = $result_TubingTrack->fetch_assoc()) {
-        echo "<h4>Голосов за: Трасса для тюбингов  " . $row['count'] . "</h4>";
+        echo "<h4>Голосов за: Трасса для тюбингов без подъемника " . $row['count'] . "</h4>";
     }
 
 
-$TubingTrack = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%6%'";
-$result_TubingTrack = mysqli_query($conn, $TubingTrack);
+$TubingTrackLift = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%6%'";
+$result_TubingTrackLift = mysqli_query($conn, $TubingTrackLift);
     
     // Выводим количество одинаковых слов
-    while ($row = $result_TubingTrack->fetch_assoc()) {
+    while ($row = $result_TubingTrackLift->fetch_assoc()) {
         echo "<h4>Голосов за: Трасса для тюбингов с подьемом " . $row['count'] . "</h4>";
+    }
+
+
+$ChildrensPlayground = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%7%'";
+$result_ChildrensPlayground = mysqli_query($conn, $ChildrensPlayground);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_ChildrensPlayground->fetch_assoc()) {
+        echo "<h4>Голосов за: Детскую площадку " . $row['count'] . "</h4>";
+    }
+
+
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
+    }
+
+    
+$Greenhouse = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%8%'";
+$result_Greenhouse = mysqli_query($conn, $Greenhouse);
+    
+    // Выводим количество одинаковых слов
+    while ($row = $result_Greenhouse->fetch_assoc()) {
+        echo "<h4>Голосов за: Оранжерею (ботаничиский сад) " . $row['count'] . "</h4>";
     }
                 ?>
             </div>

@@ -260,13 +260,13 @@ if ($result_ObservationTower->num_rows > 0) {
 }
 
 
-$BiathlonStadium = "SELECT SUM(count) as total_count FROM (SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%BiathlonStadium%' GROUP BY `voit`) as temp_table HAVING COUNT(*) > 1";
+$BiathlonStadium = "SELECT COUNT(*) as count FROM `voits` WHERE `voit` LIKE '%3%'";
 $result_BiathlonStadium = mysqli_query($conn, $BiathlonStadium);
 
 if ($result_BiathlonStadium->num_rows > 0) {
     // Выводим количество одинаковых слов
     while ($row = $result_BiathlonStadium->fetch_assoc()) {
-        echo "<h4>Голосов за: BiathlonStadium  " . $row['total_count'] . "</h4>";
+        echo "<h4>Голосов за: BiathlonStadium  " . $row['count'] . "</h4>";
         $data["BiathlonStadium"] = $row["total_count"];
     }
 } else {

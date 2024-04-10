@@ -1,3 +1,17 @@
+<?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "stars_uvals";
+  
+  // Создаем соединение
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  
+  // Проверяем соединение
+  if ($conn->connect_error) {
+      die("Соединение с базой данных не удалось: " . $conn->connect_error);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,20 +25,6 @@
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- Chatra {literal}-->
-    <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "stars_uvals";
-      
-      // Создаем соединение
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      
-      // Проверяем соединение
-      if ($conn->connect_error) {
-          die("Соединение с базой данных не удалось: " . $conn->connect_error);
-      }
-    ?>
     <script>
       (function(d, w, c) {
       w.ChatraID = 'HkjoreZ7TDjDoHKoE';
@@ -62,14 +62,19 @@
         <div class="main"> 
           <h3>Звездные увалы</h3>
           <aticle class="main__title"> 
-            <h2>Проголосовало <span>
-                 <?php
-                  $qwery = "SELECT COUNT(*) as people FROM `voits`";
-                  $result = mysqli_query($conn, $qwery);
-                  while($row = $result->fetch_assoc()){
+            <h2>
+              Проголосовало 
+              <span>
+                <?php
+                $qwery = "SELECT COUNT(*) as people FROM `voits`";
+                $result = mysqli_query($conn, $qwery);
+                while($row = $result->fetch_assoc()){
                   echo $row['people'];
-                  }; 
-                  ?> </span>человек</h2>
+                }; 
+                ?> 
+              </span>
+              человек
+            </h2>
           </aticle>
           <h2>Проголосуйте и вы</h2><a href="#map">Голосовать </a>
         </div>
@@ -400,6 +405,5 @@
         </div>
       </footer>
     </div>
-
   </body>
 </html>

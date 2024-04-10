@@ -27,14 +27,14 @@
     <!-- Chatra {literal}-->
     <script>
       (function(d, w, c) {
-      w.ChatraID = 'HkjoreZ7TDjDoHKoE';
-      var s = d.createElement('script');
-      w[c] = w[c] || function() {
-      (w[c].q = w[c].q || []).push(arguments);
-      };
-      s.async = true;
-      s.src = 'https://call.chatra.io/chatra.js';
-      if (d.head) d.head.appendChild(s);
+        w.ChatraID = 'HkjoreZ7TDjDoHKoE';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+          (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
       })(document, window, 'Chatra');
       // /Chatra {/literal}
       
@@ -182,7 +182,7 @@
               <article class="galary__title"> 
                 <h2 id="galary">Галерея</h2>
               </article>
-              <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="2" pagination-type="fraction">
+              <swiper-container class="mySwiper galary__blocks" pagination="true" pagination-clickable="true" space-between="10" slides-per-view="2" pagination-type="none">
                 <swiper-slide><img src="img/biathlon_stadium.png" alt="slide1"></swiper-slide>
                 <swiper-slide><img src="img/Childrens_playground.png" alt="slide2"></swiper-slide>
                 <swiper-slide><img src="img/downhill_track.png" alt="slide3"></swiper-slide>
@@ -258,7 +258,7 @@
                     </div>
                   </div>
                 </div>
-                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="10" pagination-type="fraction">
+                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
                   <swiper-slide class="object" data-object='{"id": 1, "name": "Благоустройство рудника", "price": "₽4", "image": "img/the_spring.png", "value": "Mine improvement"}'>
                     <img src="img/the_spring.png" alt="">
                     <div class="text"> 

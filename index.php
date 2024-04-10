@@ -313,64 +313,118 @@
                       <h4>Экошкола - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 10, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 10, "name": "Зоны отдыха вдоль тропинок, тротуаров", "price": "₽0.065", "image": "img/Recreation-area-trop.jpg"}'> 
+                    <img src="img/Recreation-area-trop.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Зоны отдыха вдоль тропинок, тротуаров - <span>65тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 11, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 11, "name": "Место для пикника", "price": "₽0.15", "image": "img/Piknik.jpg"}'> 
+                    <img src="img/Piknik.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Место для пикника - <span>150тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 12, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 12, "name": "Беседки", "price": "₽0.3", "image": "img/Gazebos.jpg"}'> 
+                    <img src="img/Gazebos.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Беседки - <span>300тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 13, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 13, "name": "Беседки(с навесом)", "price": "₽0.45", "image": "img/Gazebos2.jpg"}'> 
+                    <img src="img/Gazebos2.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Беседки(с навесом) - <span>450тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 14, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 14, "name": "Площадка для воркаута (покрытие песок) ", "price": "₽0.5", "image": "img/Vorkayt.jpg"}'> 
+                    <img src="img/Vorkayt.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Площадка для воркаута (покрытие песок) - <span>500тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 15, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 15, "name": "Мини зоопарк", "price": "₽0", "image": "img/Zoo.jpg"}'> 
+                    <img src="img/Zoo.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Мини зоопарк - <span>Реализуется за счет средств инвестора</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 16, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 16, "name": "Площадка для воркаута (резиновое покрытие)", "price": "₽4", "image": "img/Vorkayt2.jpg"}'> 
+                    <img src="img/Vorkayt2.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Площадка для воркаута (резиновое покрытие) - <span>4млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 17, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 17, "name": "Глемпинг", "price": "₽0", "image": "img/Glemping.jpg"}'> 
+                    <img src="img/Glemping.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Глемпинг - <span>Реализуется за счет средств инвестора</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 18, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 18, "name": "Кэмпинг", "price": "₽0", "image": "img/Kemping.jpg"}'> 
+                    <img src="img/Kemping.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Кэмпинг - <span>Реализуется за счет средств инвестора</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 19, "name": "Экошкола", "price": "₽10", "image": "img/Eco-school.png"}'> 
-                    <img src="img/Eco-school.png" alt="">
+                  <swiper-slide class="object" data-object='{"id": 19, "name": "Туалет", "price": "₽0.35", "image": "img/img/WC.jpg"}'> 
+                    <img src="img/WC.jpg" alt="">
                     <div class="text"> 
-                      <h4>Экошкола - <span>10млн</span></h4>
+                      <h4>Туалет - <span>350тыс</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 20, "name": "Амфитеатр", "price": "₽1", "image": "img/Eco-school.jpg"}'> 
+                    <img src="img/Amfiteatr.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Амфитеатр - <span>1млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 21, "name": "Лыжероллерная трасса (3км)", "price": "₽17", "image": "img/Roller-ski-track.jpg"}'> 
+                    <img src="img/Roller-ski-track.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Лыжероллерная трасса (3км) - <span>17млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 22, "name": "Пешеходные дорожки (1 км)", "price": "₽4", "image": "img/Footpaths.jpg"}'> 
+                    <img src="img/Footpaths.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Пешеходные дорожки (1 км)  - <span>4млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 23, "name": "Арт объекты", "price": "₽3", "image": "img/Arts-object.jpg"}'> 
+                    <img src="img/Arts-object.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Арт объекты - <span>3млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 24, "name": "Арт объекты (скульптуры обитателей Увалов)", "price": "₽3", "image": "img/Arts-object2.jpg"}'> 
+                    <img src="img/Arts-object2.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Арт объекты (скульптуры обитателей Увалов) - <span>3млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 25, "name": "Детская площадка «Космос»", "price": "₽30", "image": "img/Childrens-playground2.jpg"}'> 
+                    <img src="img/Childrens-playground2.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Детская площадка «Космос» - <span>30млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 26, "name": "Подъемник", "price": "₽11", "image": "img/Lift.jpg"}'> 
+                    <img src="img/Lift.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Подъемник - <span>11млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 27, "name": "Смотровая площадка с которой открывается вид на города", "price": "₽20", "image": "img/Observation-deck.jpg"}'> 
+                    <img src="img/Observation-deck.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Смотровая площадка с которой открывается вид на город - <span>20млн</span></h4>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide class="object" data-object='{"id": 28, "name": "Лыжная база", "price": "₽25", "image": "img/Ski-base.jpg"}'> 
+                    <img src="img/Ski-base.jpg" alt="">
+                    <div class="text"> 
+                      <h4>Лыжная база  - <span>25млн</span></h4>
                     </div>
                   </swiper-slide>
                 </swiper-container>

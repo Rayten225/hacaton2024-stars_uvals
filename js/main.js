@@ -6,7 +6,7 @@ let app = new Vue({
         }
     },
 });
-
+let qeryvoit = [];
 // burger menu
 const burgerButton = document.querySelector('.burger-button');
 const burgerMenu = document.querySelector('.burger-menu')
@@ -67,7 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
                    // alert($_COOKIE('dataOBJ'))  // 86400 - это время в секундах, равное одному дню
                     placedObjects.push(data.id); // добавляем идентификатор объекта в массив размещенных объектов
                     document.querySelector('.message').textContent = '';
-                    document.cookie = `data-id=${data.id}`;
+                    let voit = data.id;
+                    qeryvoit.push(voit);
+                    
 
                     var cross = document.createElement('span');
                     cross.innerHTML = "❌";
@@ -129,7 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 document.querySelector('.message').textContent = 'Место уже занято!';
                 selectedObject = null;
-            }
+            }    
+            document.cookie = `data-id=${qeryvoit}`
         });
     }
 

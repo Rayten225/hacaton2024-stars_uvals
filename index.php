@@ -258,7 +258,7 @@
                     </div>
                   </div>
                 </div>
-                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="2" space-between="10" pagination-type="fraction">
+                <swiper-container class="mySwiper objects" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="10" pagination-type="none">
                   <swiper-slide class="object" data-object='{"id": 1, "name": "Благоустройство рудника", "price": "₽4", "image": "img/the_spring.png", "value": "Mine improvement"}'>
                     <img src="img/the_spring.png" alt="">
                     <div class="text"> 

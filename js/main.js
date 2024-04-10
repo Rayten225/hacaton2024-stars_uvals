@@ -178,3 +178,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // media
+
+const swiper = document.querySelector(".objects");
+
+function updateSlidesPerView() {
+    if (window.innerWidth < 895) {
+        swiper.setAttribute("slides-per-view", "1");
+        swiper.setAttribute("pagination-type", "none");
+    } else if (window.innerWidth < 1335) {
+        swiper.setAttribute("slides-per-view", "2");
+        swiper.setAttribute("pagination-type", "fraction");
+    } else {
+        swiper.setAttribute("slides-per-view", "3");
+        swiper.setAttribute("pagination-type", "none");
+    }
+}
+
+// Вызываем функцию при загрузке страницы
+updateSlidesPerView();
+
+// Добавляем обработчик изменения размера окна
+window.addEventListener("resize", updateSlidesPerView);

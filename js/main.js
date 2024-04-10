@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    //  modal window
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
     var closeButton = document.querySelector(".close-button");
@@ -176,8 +177,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// -------------------------------------------
-
-//  modal window
-
-
+// media

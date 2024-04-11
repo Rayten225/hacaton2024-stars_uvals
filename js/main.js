@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.setAttribute('data-id', data.id); // устанавливаем атрибут data-id у места
                     placedObjects.push(data.id); // добавляем идентификатор объекта в массив размещенных объектов
                     document.querySelector('.message').textContent = '';
+                    let voit = data.id;
+                    qeryvoit.push(voit);
 
                     var cross = document.createElement('span');
                     cross.innerHTML = "❌";
@@ -139,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.message').textContent = 'Место уже занято!';
                 selectedObject = null;
             }
+            document.cookie = `data-id=${qeryvoit}`
         });
     }
 

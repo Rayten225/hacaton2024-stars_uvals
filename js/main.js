@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateTotalCost() {
-        totalCostBlock.textContent = 'Общая сумма: ' + totalCost.toFixed(2)  +  'млн';
-
+        totalCostBlock.textContent = 'Общая стоимость: $' + totalCost.toFixed(2);
+        
         // Проверка на превышение общей стоимости
         if (totalCost > 75) {
             totalCostBlock.style.color = 'red'; // подсвечиваем красным
@@ -58,25 +58,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (selectedObject) {
                     var data = JSON.parse(selectedObject.getAttribute('data-object'));
                     var img = document.createElement('img');
-                    img.style.width = '50px'; img.style.height = '50px';
                     img.src = data.image;
-                    //let dataOBJ = data;
+                    img.onload = function() {
+                        var placeWidth = this.parentElement.offsetWidth;
+                        var placeHeight = this.parentElement.offsetHeight;
+                        var imgAspectRatio = this.width / this.height;
+                        var placeAspectRatio = placeWidth / placeHeight;
+                
+                        if (imgAspectRatio > placeAspectRatio) {
+                            this.style.width = '100%';
+                            this.style.height = '100%';
+                        } else {
+                            this.style.width = 'auto';
+                            this.style.height = '100%';
+                        }
+                    };
                     this.appendChild(img);
                     this.setAttribute('data-id', data.id); // устанавливаем атрибут data-id у места
-                    //document.cookie = "dataOBJ=data";
-                   // alert($_COOKIE('dataOBJ'))  // 86400 - это время в секундах, равное одному дню
                     placedObjects.push(data.id); // добавляем идентификатор объекта в массив размещенных объектов
                     document.querySelector('.message').textContent = '';
-                    let voit = data.id;
-                    qeryvoit.push(voit);
-                    
 
                     var cross = document.createElement('span');
                     cross.innerHTML = "❌";
                     cross.classList.add('delete');
                     this.appendChild(cross);
 
-                    cross.addEventListener('click', function (e) {
+                    cross.addEventListener('click', function(e) {
                         e.stopPropagation();
                         var parentElement = this.parentElement; // сохраняем ссылку на родительский элемент
                         parentElement.removeChild(this.previousElementSibling); // удаляем изображение
@@ -115,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                     if (!objectExistsInInfo) {
                         var infoText = document.createElement('p');
-                        infoText.textContent = data.name + ':' + data.price;
+                        infoText.textContent = 'Добавлен объект: ' + data.name + ', Цена: ' + data.price;
                         infoBlock.appendChild(infoText);
                         totalCost += parseFloat(data.price.substring(1)); // увеличиваем общую стоимость
                         updateTotalCost(); // обновляем значение счетчика
@@ -131,8 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 document.querySelector('.message').textContent = 'Место уже занято!';
                 selectedObject = null;
-            }    
-            document.cookie = `data-id=${qeryvoit}`
+            }
         });
     }
 
@@ -151,31 +157,33 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    //  modal window
-    var modal = document.querySelector(".modal");
-    var trigger = document.querySelector(".trigger");
-    var closeButton = document.querySelector(".close-button");
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
-
-    function windowOnClick(event) {
-        if (event.target === modal) {
-            toggleModal();
-        }
-    }
+    
     // Обработчик нажатия на кнопку
-    trigger.addEventListener('click', function () {
-        // Проверяем, превышает ли общая стоимость 75
-        if (totalCost > 75) {
-            document.querySelector('.message').textContent = 'Поменяйте сумму';
-        } else {
-            trigger.addEventListener("click", toggleModal);
-            closeButton.addEventListener("click", toggleModal);
-            window.addEventListener("click", windowOnClick);
-        }
-    });
-});
+     //  modal window
+     var modal = document.querySelector(".modal");
+     var trigger = document.querySelector(".trigger");
+     var closeButton = document.querySelector(".close-button");
+     function toggleModal() {
+         modal.classList.toggle("show-modal");
+     }
+ 
+     function windowOnClick(event) {
+         if (event.target === modal) {
+             toggleModal();
+         }
+     }
+     // Обработчик нажатия на кнопку
+     trigger.addEventListener('click', function () {
+         // Проверяем, превышает ли общая стоимость 75
+         if (totalCost > 75) {
+             document.querySelector('.message').textContent = 'Поменяйте сумму';
+         } else {
+             trigger.addEventListener("click", toggleModal);
+             closeButton.addEventListener("click", toggleModal);
+             window.addEventListener("click", windowOnClick);
+         }
+     });
+ });
 
 // media
 

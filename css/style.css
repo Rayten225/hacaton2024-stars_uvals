@@ -733,6 +733,7 @@ main .map .container .map__wraper .map__blocks swiper-container {
   border-radius: 15px 15px 0 0;
   padding: 20px;
   overflow: visible;
+  cursor: pointer;
 }
 main .map .container .map__wraper .map__blocks swiper-container swiper-slide {
   width: 100%;

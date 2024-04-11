@@ -765,6 +765,10 @@ main .timer {
   height: 440px;
 }
 
+.object.selected {
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+}
+
 @media screen and (max-width: 1180px) {
   main .info-project .container .info-project__wraper .info-project__text {
     gap: 10px;

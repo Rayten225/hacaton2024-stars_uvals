@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         parentElement.removeChild(this.previousElementSibling); // удаляем изображение
                         parentElement.removeChild(this); // удаляем кнопку удаления
                         parentElement.removeAttribute('data-id'); // удаляем атрибут data-id у места
+                        
 
                         // Удаляем информацию об этом объекте из блока .info
                         var objectName = data.name;
@@ -105,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (index !== -1) {
                             placedObjects.splice(index, 1); // удаляем идентификатор объекта из массива
                             totalCost -= parseFloat(data.price.substring(1)); // уменьшаем общую стоимость
+                            
                             updateTotalCost(); // обновляем значение счетчика
                         }
                         restoreObjects(); // восстанавливаем объекты в раздел objects

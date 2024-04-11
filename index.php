@@ -45,6 +45,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 
+    <style>
+      .object {
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+}
+
+.object.selected::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+    z-index: 1; /* Устанавливаем выше других элементов */
+}
+    </style>
   </head>
   <body>
     <div class="wraper" id="app">

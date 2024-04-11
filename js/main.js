@@ -6,7 +6,7 @@ let app = new Vue({
         }
     },
 });
-let qeryvoit = [];
+
 // burger menu
 const burgerButton = document.querySelector('.burger-button');
 const burgerMenu = document.querySelector('.burger-menu')
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var totalCostBlock = document.querySelector('.total-cost');
     var placedObjects = []; // массив для хранения идентификаторов объектов, размещенных в местах
     var totalCost = 0; // общая стоимость всех добавленных объектов
+    let qeryvoit = [];
 
     function restoreObjects() {
         var objectsContainer = document.querySelector('.objects');
@@ -105,10 +106,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
 
                         var index = placedObjects.indexOf(data.id);
+                        var voitIndex = qeryvoit.indexOf(data.id);
                         if (index !== -1) {
                             placedObjects.splice(index, 1); // удаляем идентификатор объекта из массива
+                            qeryvoit.splice(voitIndex, 1);
                             totalCost -= parseFloat(data.price.substring(1)); // уменьшаем общую стоимость
-                            
+                            document.cookie = `data-id=${qeryvoit}`          
                             updateTotalCost(); // обновляем значение счетчика
                         }
                         restoreObjects(); // восстанавливаем объекты в раздел objects

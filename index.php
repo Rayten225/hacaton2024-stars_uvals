@@ -246,7 +246,8 @@
                   </div>
                   <button class="trigger button">Голосовать</button>
                   <div class="modal">
-                    <div class="modal-content"><span class="close-button">&times;</span><br><br>
+                    <div class="modal-content">
+                      <span class="close-button">&times;</span><br>
                       <form action="check_admin.php" method="post">
                         <div> 
                           <label for="fio">Введите ФИО :</label>

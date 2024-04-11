@@ -20,7 +20,3 @@ app.get('/qwer', (req, res) => {
 app.listen(80, () => {
     console.log(`Server has been startred...`)
 })
-
-
-
-

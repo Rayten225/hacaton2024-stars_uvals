@@ -703,17 +703,17 @@ main .map .container .map__wraper .map__blocks .modal-content form div button {
   margin-top: 20px;
 }
 main .map .container .map__wraper .map__blocks .close-button {
+  padding-inline: 7px;
   font-size: 24px;
-  padding-inline: 8px;
-  position: absolute;
-  top:10px;
-  right:10px;
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
   background-color: lightgray;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  position: absolute;
+  right: 10px;
+  top:10px;
 }
 main .map .container .map__wraper .map__blocks .close-button:hover {
   background-color: darkgray;

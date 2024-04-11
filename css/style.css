@@ -662,6 +662,7 @@ main .map .container .map__wraper .map__blocks .modal-content {
   background-color: white;
   padding: 1rem 1.5rem;
   border-radius: 30px;
+  width: 400px;
 }
 main .map .container .map__wraper .map__blocks .modal-content form {
   display: -webkit-box;
@@ -671,10 +672,13 @@ main .map .container .map__wraper .map__blocks .modal-content form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 main .map .container .map__wraper .map__blocks .modal-content form div {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
 }
 main .map .container .map__wraper .map__blocks .modal-content form div label {
   color: #49815b;
@@ -695,20 +699,25 @@ main .map .container .map__wraper .map__blocks .modal-content form div button {
       align-self: center;
   font-size: 20px;
   padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 main .map .container .map__wraper .map__blocks .close-button {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
+  padding-inline: 7px;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
-  border-radius: 0.25rem;
+  border-radius: 50%;
   background-color: lightgray;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  position: absolute;
+  right: 10px;
+  top:10px;
 }
 main .map .container .map__wraper .map__blocks .close-button:hover {
   background-color: darkgray;
+  color: #fff;
 }
 main .map .container .map__wraper .map__blocks .show-modal {
   opacity: 1;

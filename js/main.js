@@ -171,8 +171,10 @@ document.addEventListener('DOMContentLoaded', function () {
      var modal = document.querySelector(".modal");
      var trigger = document.querySelector(".trigger");
      var closeButton = document.querySelector(".close-button");
+     let body = document.querySelector('body');
      function toggleModal() {
          modal.classList.toggle("show-modal");
+         body.classList.toggle('lock');
      }
  
      function windowOnClick(event) {

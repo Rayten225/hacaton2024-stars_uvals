@@ -11,6 +11,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Соединение с базой данных не удалось: " . $conn->connect_error);
 }
+
+if ($_COOKIE["admin"] == 0){
+    header('Location: check_admin.php');
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">

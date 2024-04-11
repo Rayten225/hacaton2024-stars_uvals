@@ -13,6 +13,10 @@ if ($conn->connect_error) {
 }
 ////
 
+if (isset($_COOKIE["admin"])){
+    header('Location: admin.php');
+}
+
 if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
     $a = 0;
     $query = 'SELECT `login`, `password` FROM `admin`';
@@ -21,7 +25,8 @@ if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
     while ($row = $result->fetch_assoc()) {
         if (($row['login'] == $_POST['log']) && ($row['password'] == $_POST['pas'])) {
             $a = 1;
-        }
+            setcookie("admin", $a);
+        }   
     }
 
     if ($a == 1) {

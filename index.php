@@ -260,7 +260,7 @@
                         <div>
                           <label for="gen">Пол :</label>
                           <select id="gen" name="gen">
-                            <option value="m">Муж.  </option>
+                            <option value="m">Муж.</option>
                             <option value="g">Жен.</option>
                           </select>
                         </div>

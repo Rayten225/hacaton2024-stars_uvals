@@ -268,6 +268,13 @@
                           <label for="spec">Специальность :</label>
                           <input id="spec" type="text" name="spec">
                         </div>
+                        <div>
+                          <label for="ch1" class="checkBoxLabel">Согласны на обработку персональных данных?</label>
+                          <label class="checkBox">
+                            <input id="ch1" type="checkbox">
+                            <div class="transition"></div>
+                          </label>
+                        </div>
                         <div> 
                           <button type="submit">Проголосовать</button>
                         </div>

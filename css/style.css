@@ -261,6 +261,9 @@ footer .container .footer__wraper .footer__text {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 20px;
+  border-radius: 15px;
 }
 footer .container .footer__wraper .footer__text .op {
   margin-top: 20px;
@@ -297,6 +300,23 @@ footer .container .footer__wraper .footer__navigation ul a:hover {
     margin-top: 40px;
     width: 100%;
     gap: 40px;
+  }
+}
+@media screen and (max-width: 715px){
+  footer .container .footer__wraper{
+    flex-direction: column;
+    align-items: center;
+
+    & nav ul{
+      align-items: center;
+
+      & li a{
+        background-color: rgba(255, 255, 255, .5);
+      }
+    }
+  }
+  footer{
+    padding-bottom: 30px;
   }
 }
 /* базовые настройки */
@@ -674,6 +694,54 @@ main .map .container .map__wraper .map__blocks .modal-content form {
           flex-direction: column;
   gap: 20px;
 }
+main .map .container .map__wraper .map__blocks .modal-content form div:has(label.checkBox){
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-content: center;
+
+  & .checkBoxLabel{
+    font-size: 16px !important;
+    float: left;
+  }
+  & .checkBox {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #000;
+    cursor: pointer;
+  }
+  
+  & .checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+  }
+  
+  & .checkBox input[type=checkbox]:checked + div {
+    left: -10px;
+    top: -10px;
+  }
+  
+  & .checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+  }
+  
+  & .transition {
+    transition: 300ms ease;
+  }
+}
 main .map .container .map__wraper .map__blocks .modal-content form div {
   width: 100%;
   display: flex;
@@ -778,7 +846,7 @@ main .timer {
   background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1190px) {
   main .info-project .container .info-project__wraper .info-project__text {
     gap: 10px;
   }
@@ -790,12 +858,12 @@ main .timer {
     border-radius: 15px;
   }
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1030px) {
   main .info-project .container .info-project__wraper .info-project__img img {
     width: 300px;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 950px) {
   main .info-project .container .info-project__wraper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -902,17 +970,24 @@ main .timer {
   }
   main .map .container .map__wraper .map__blocks .places{
     display: grid;
-    height:800px;
+    height:auto;
     grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
     gap:10px;
     position:static;
-     padding:10px;
+    padding:10px;
      
-     & .item{
-       position: static;
-       width:auto;
-       height:auto;
-     }
+    & .item{
+      position: static;
+      width:auto;
+      height:150px;
+      overflow: hidden;
+
+      & img{
+      width: 100%;
+      height: 80% !important;
+      object-fit: cover;
+      }
+    }
   }
   main .map .container .map__wraper .map__blocks .map__sum {
     -webkit-box-ordinal-group: 3;

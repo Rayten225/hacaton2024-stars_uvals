@@ -49,13 +49,39 @@ if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
 }
 ?>
     <?php 
-      if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
+    //   if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
 
-          $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "'.$_COOKIE['data-id'].'")';
+    //       $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "'.$_COOKIE['data-id'].'")';
 
 
-          $result = mysqli_query($conn, $query);
-          header('Location: ./index.php');
+    //       $result = mysqli_query($conn, $query);
+    //       header('Location: ./index.php');
+    //   }
+
+
+    if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
+
+        $check = 'SELECT COUNT(*) as checkvoit FROM `voits` WHERE `FIO` = "'.$_POST['fio'].'"';
+        $result_check = mysqli_query($conn, $check);
+        while ($row = $result_check->fetch_assoc()) {
+            $qerycount = $row['checkvoit'];
+        }
+        // var_dump($result_check);
+        echo $qerycount;
+        if ($qerycount > 0){
+            $query = 'UPDATE `voits` SET `FIO` = "'.$_POST['fio'].'", `birthday` = "'.$_POST['date'].'", `gender` = "'.$_POST['gen'].'", `field of activity` = "'.$_POST['spec'].'", `voit` = "'.$_COOKIE['data-id'].'" WHERE `voits`.`FIO` = "'.$_POST['fio'].'"';
+            $result = mysqli_query($conn, $query);
+            header('Location: ./index.php');
+            echo $result;
+        }else{
+            $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "'.$_COOKIE['data-id'].'")';
+            $result = mysqli_query($conn, $query);
+            header('Location: ./index.php');
+            echo $result;
+
+        }
+
+
       }
     ?>
 <!DOCTYPE html>

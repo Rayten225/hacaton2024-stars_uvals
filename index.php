@@ -251,11 +251,11 @@
                       <form action="check_admin.php" method="post">
                         <div> 
                           <label for="fio">Введите ФИО :</label>
-                          <input id="fio" type="text" name="fio">
+                          <input id="fio" type="text" name="fio" required>
                         </div>
                         <div> 
                           <label for="date">Дата рождения :</label>
-                          <input id="date" type="date" name="date">
+                          <input id="date" type="date" name="date" min="1900-01-01" max="2024-01-01" required>
                         </div>
                         <div>
                           <label for="gen">Пол :</label>
@@ -266,12 +266,12 @@
                         </div>
                         <div> 
                           <label for="spec">Специальность :</label>
-                          <input id="spec" type="text" name="spec">
+                          <input id="spec" type="text" name="spec" required>
                         </div>
                         <div>
                           <label for="ch1" class="checkBoxLabel">Согласны на обработку персональных данных?</label>
                           <label class="checkBox">
-                            <input id="ch1" type="checkbox">
+                            <input id="ch1" type="checkbox" required>
                             <div class="transition"></div>
                           </label>
                         </div>

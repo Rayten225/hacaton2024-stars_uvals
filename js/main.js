@@ -215,9 +215,7 @@ function updateSlidesPerView() {
         swiper.setAttribute("pagination-type", "none");
     }
 }
-
 // Вызываем функцию при загрузке страницы
 updateSlidesPerView();
-
 // Добавляем обработчик изменения размера окна
 window.addEventListener("resize", updateSlidesPerView);

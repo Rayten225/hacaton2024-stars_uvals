@@ -21,7 +21,6 @@
     <!-- CSS-->
     <link rel="stylesheet" href="css/style.css">
     <!-- JS-->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- FAVICON-->
@@ -469,5 +468,9 @@
         </div>
       </footer>
     </div>
+    <noscript>
+      Включите пожалуйста JavaScript( JS ) в настройках, 
+      иначе данный сайт будет некорректно работать
+    </noscript>
   </body>
 </html>

@@ -1,12 +1,3 @@
-let app = new Vue({
-    el: "#app",
-    data() {
-        return {
-            message: 'Прив'
-        }
-    },
-});
-
 // burger menu
 const burgerButton = document.querySelector('.burger-button');
 const burgerMenu = document.querySelector('.burger-menu')
@@ -219,3 +210,16 @@ function updateSlidesPerView() {
 updateSlidesPerView();
 // Добавляем обработчик изменения размера окна
 window.addEventListener("resize", updateSlidesPerView);
+
+// обводка обяекта
+var slides = document.querySelectorAll('.object');
+
+// Добавляем обработчик клика для каждого блока
+slides.forEach(function(slide) {
+  slide.addEventListener('click', function() {
+    slides.forEach(function(s) {
+      s.classList.remove('selected');
+    });
+    slide.classList.add('selected');
+  });
+});

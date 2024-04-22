@@ -26,7 +26,6 @@ if ($_COOKIE["admin"] == 0){
     <!-- CSS -->
     <link rel="stylesheet" href="css/admin.css">
     <!-- JS-->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- FAVICON-->
@@ -309,6 +308,10 @@ $result_SkiBase = mysqli_query($conn, $SkiBase);
     </div>
     <div class="grid">
     </div>
+    <noscript>
+      Включите пожалуйста JavaScript( JS ) в настройках, 
+      иначе данный сайт будет некорректно работать
+    </noscript>
 </body>
 
 </html>

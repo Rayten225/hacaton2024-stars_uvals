@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         var placeHeight = this.parentElement.offsetHeight;
                         var imgAspectRatio = this.width / this.height;
                         var placeAspectRatio = placeWidth / placeHeight;
-                
+                        let tag = data.name
+                        document.cookie = `tag=${tag}`
                         if (imgAspectRatio > placeAspectRatio) {
                             this.style.width = '100%';
                             this.style.height = '100%';

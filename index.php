@@ -391,7 +391,7 @@
                       <h4>Кэмпинг - <span>Реализуется за счет средств инвестора</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 19, "name": "Туалет", "price": "₽0.35", "image": "img/img/WC.jpg"}'> 
+                  <swiper-slide class="object" data-object='{"id": 19, "name": "Туалет", "price": "₽0.35", "image": "img/WC.jpg"}'> 
                     <img src="img/WC.jpg" alt="">
                     <div class="text"> 
                       <h4>Туалет - <span>350тыс</span></h4>

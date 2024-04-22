@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     var cross = document.createElement('span');
                     cross.innerHTML = "❌";
+                    cross.setAttribute('title', `${data.name}`);
                     cross.classList.add('delete');
                     this.appendChild(cross);
 

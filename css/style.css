@@ -8,6 +8,12 @@
   font-family: "IDCLC";
   src: url("../font/Arimo-VariableFont_wght.ttf");
 }
+:root{
+  --swiper-navigation-color: #5B9F70 !important;
+  --swiper-navigation-size: 48px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+}
 /* header */
 header .header {
   /* header-navigation */
@@ -548,7 +554,7 @@ main .map .container .map__wraper .map__blocks .map__block {
 main .map .container .map__wraper .map__blocks .map__block .item {
   width: 50px;
   height: 50px;
-  background-color: lightgray;
+  background-color: rgba(200, 230, 200, 0.7);
   border: 2px solid #5B9F70;
   border-radius: 5px ;
   position: absolute;
@@ -597,6 +603,7 @@ main .map .container .map__wraper .map__blocks .map__block .item10 {
 main .map .container .map__wraper .map__blocks .map__block .item11 {
   right: 8%;
   top: 28%;
+  outline: none !important;
 }
 main .map .container .map__wraper .map__blocks .map__sum {
   border-radius: 15px;
@@ -638,18 +645,18 @@ main .map .container .map__wraper .map__blocks .full-sum h3 span {
   color: #000;
 }
 main .map .container .map__wraper .map__blocks button {
+  text-align: center;
   background: #5B9F70;
   color: #fff;
   border-radius: 30px;
   font-size: 32px;
   border: none;
   outline: none;
-  line-height: 36.8px;
-  padding: 20px 40px;
   font-family: "IDBC";
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
+  padding-block: 20px;
 }
 main .map .container .map__wraper .map__blocks button:hover {
   background: #49815b;
@@ -1028,4 +1035,7 @@ main .timer {
       grid-column: 1 / 2;
     }
   }
+}
+.selected {
+  outline: 2px solid #256037;
 }

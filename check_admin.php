@@ -94,23 +94,8 @@ if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
     <!-- CSS -->
     <link rel="stylesheet" href="css/check_admin.css">
     <!-- JS-->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <!-- Chatra {literal}-->
-    <script>
-        (function(d, w, c) {
-            w.ChatraID = 'HkjoreZ7TDjDoHKoE';
-            var s = d.createElement('script');
-            w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://call.chatra.io/chatra.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'Chatra');
-        // /Chatra {/literal}
-    </script>
     <!-- FAVICON-->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -133,6 +118,10 @@ if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
             <a href="index.php">На главную</a>
         </div>
     </form>
+    <noscript>
+      Включите пожалуйста JavaScript( JS ) в настройках, 
+      иначе данный сайт будет некорректно работать
+    </noscript>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "kvant05";
 $dbname = "stars_uvals";
 
 // Создаем соединение

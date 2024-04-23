@@ -321,7 +321,7 @@
                       <h4>Экошкола - <span>10млн</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 10, "name": "Зоны отдыха вдоль тропинок, тротуаров", "price": "₽0.065", "image": "img/Recreation-area-trop.jpg"}'> 
+                  <swiper-slide class="object" data-object='{"id": 10, "name": "Зоны отдыха вдоль тропинок и тротуаров", "price": "₽0.065", "image": "img/Recreation-area-trop.jpg"}'> 
                     <img src="img/Recreation-area-trop.jpg" alt="">
                     <div class="text"> 
                       <h4>Зоны отдыха вдоль тропинок, тротуаров - <span>65тыс</span></h4>
@@ -345,12 +345,14 @@
                       <h4>Беседки(с навесом) - <span>450тыс</span></h4>
                     </div>
                   </swiper-slide>
-                  <swiper-slide class="object" data-object='{"id": 14, "name": "Площадка для воркаута (покрытие песок) ", "price": "₽0.5", "image": "img/Vorkayt.jpg"}'> 
+
+                  <swiper-slide class="object" data-object='{"id": 14, "name": "Площадка для воркаута (покрытие песок)", "price": "₽0.5", "image": "img/Vorkayt.jpg"}'> 
                     <img src="img/Vorkayt.jpg" alt="">
                     <div class="text"> 
-                      <h4>Площадка для воркаута (покрытие песок) - <span>500тыс</span></h4>
+                      <h4>Площадка для воркаута (покрытие песок) -  <span>500тыс</span></h4>
                     </div>
                   </swiper-slide>
+
                   <swiper-slide class="object" data-object='{"id": 15, "name": "Мини зоопарк", "price": "₽0", "image": "img/Zoo.jpg"}'> 
                     <img src="img/Zoo.jpg" alt="">
                     <div class="text"> 

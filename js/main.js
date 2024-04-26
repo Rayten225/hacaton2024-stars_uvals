@@ -180,7 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
          // Проверяем, превышает ли общая стоимость 75
          if (totalCost > 75) {
              document.querySelector('.message').textContent = 'Поменяйте сумму';
-         } else {
+         }else if (totalCost == 0) {
+            document.querySelector('.message').textContent = 'Выберите объекты';
+         }else {
              trigger.addEventListener("click", toggleModal);
              closeButton.addEventListener("click", toggleModal);
              window.addEventListener("click", windowOnClick);

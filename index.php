@@ -220,7 +220,7 @@
                 <div class="map__sum"> 
                   <h3>Сумма</h3>
                   <div class="map__sum-text sum info" style="display: none; font-size: 20px;">
-                    <!-- информация об объектах -->
+                    
                   </div>
                   <hr>
                   <div class="full-sum"> 

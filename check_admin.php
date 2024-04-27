@@ -49,40 +49,51 @@ if ((isset($_POST['log'])) && (isset($_POST['pas']))) {
 }
 ?>
     <?php 
-    //   if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
 
-    //       $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "'.$_COOKIE['data-id'].'")';
+    if (isset($_POST["fio"]) && isset($_POST["date"]) && isset($_POST["spec"]) && isset($_POST["gen"])) {
 
-
-    //       $result = mysqli_query($conn, $query);
-    //       header('Location: ./index.php');
-    //   }
-
-
-    if ((isset($_POST["fio"]))&&(isset($_POST["date"]))&&(isset($_POST["spec"]))&&(isset($_POST["gen"]))){
-
-        $check = 'SELECT COUNT(*) as checkvoit FROM `voits` WHERE `FIO` = "'.$_POST['fio'].'"';
-        $result_check = mysqli_query($conn, $check);
-        while ($row = $result_check->fetch_assoc()) {
+        // Подготовка SQL запроса с параметрами
+        $checkQuery = 'SELECT COUNT(*) as checkvoit FROM `voits` WHERE `FIO` = ?';
+        
+        // Подготовка и выполнение запроса с использованием подготовленного выражения
+        $checkStatement = mysqli_prepare($conn, $checkQuery);
+        mysqli_stmt_bind_param($checkStatement, 's', $_POST['fio']);
+        mysqli_stmt_execute($checkStatement);
+        
+        // Получение результата запроса
+        $result_check = mysqli_stmt_get_result($checkStatement);
+        
+        // Обработка результата запроса
+        $qerycount = 0; // Инициализация переменной перед использованием
+        if ($row = mysqli_fetch_assoc($result_check)) {
             $qerycount = $row['checkvoit'];
         }
-        // var_dump($result_check);
-        echo $qerycount;
-        if ($qerycount > 0){
-            $query = 'UPDATE `voits` SET `FIO` = "'.$_POST['fio'].'", `birthday` = "'.$_POST['date'].'", `gender` = "'.$_POST['gen'].'", `field of activity` = "'.$_POST['spec'].'", `voit` = "'.$_COOKIE['data-id'].'" WHERE `voits`.`FIO` = "'.$_POST['fio'].'"';
-            $result = mysqli_query($conn, $query);
-            header('Location: ./index.php');
-            echo $result;
-        }else{
-            $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, "'.$_POST['fio'].'", "'.$_POST['date'].'", "'.$_POST['gen'].'", "'.$_POST['spec'].'", "'.$_COOKIE['data-id'].'")';
-            $result = mysqli_query($conn, $query);
-            header('Location: ./index.php');
-            echo $result;
-
+        
+        // Освобождение результата запроса
+        mysqli_free_result($result_check);
+        
+        // Проверка количества результатов
+        if ($qerycount > 0) {
+            // Подготовка и выполнение запроса на обновление записи
+            $query = 'UPDATE `voits` SET `FIO` = ?, `birthday` = ?, `gender` = ?, `field of activity` = ?, `voit` = ? WHERE `voits`.`FIO` = ?';
+            $statement = mysqli_prepare($conn, $query);
+            mysqli_stmt_bind_param($statement, 'ssssss', $_POST['fio'], $_POST['date'], $_POST['gen'], $_POST['spec'], $_COOKIE['data-id'], $_POST['fio']);
+            mysqli_stmt_execute($statement);
+        } else {
+            // Подготовка и выполнение запроса на вставку новой записи
+            $query = 'INSERT INTO `voits` (`id`, `FIO`, `birthday`, `gender`, `field of activity`, `voit`) VALUES (NULL, ?, ?, ?, ?, ?)';
+            $statement = mysqli_prepare($conn, $query);
+            mysqli_stmt_bind_param($statement, 'sssss', $_POST['fio'], $_POST['date'], $_POST['gen'], $_POST['spec'], $_COOKIE['data-id']);
+            mysqli_stmt_execute($statement);
         }
-
-
-      }
+        
+        // Освобождение ресурсов
+        mysqli_stmt_close($statement);
+    
+        // Перенаправление пользователя
+        header('Location: ./index.php');
+        exit(); // Прекращение выполнения скрипта после перенаправления
+    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
